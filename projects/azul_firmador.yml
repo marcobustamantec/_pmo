@@ -1,0 +1,17 @@
+proyecto:
+  id: PL-01
+  nombre: Firmador intranet Azul
+  celula: clientes
+  prioridad: 1
+  estado: activo
+  
+  milestones:
+
+  
+  Firmador: Flujo masivo
+Firmador: Evolución funcional
+Firmador: Rúbrica
+Firmador: Blueprint
+Firmador: Integraciones
+Firmador: Interfaz de usuario
+Firmador: Flujo unitario
