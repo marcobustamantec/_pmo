@@ -1,0 +1,59 @@
+site_name: PMO IDIEM
+site_description: Seguimiento de proyectos PMO
+docs_dir: reports
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: es
+  font: false # usa fuentes del sistema (no depende de Google Fonts / proxy)
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - sane_lists
+  - toc:
+      permalink: true
+      # Mantiene tildes en los anchors, igual que el slug() del script
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+# Sin "nav": MkDocs arma el menú automáticamente con los .md de docs/
+# Para ordenarlo a mano, descomenta y ajusta:
+# nav:
+#   - Inicio: index.md
+#   - Mejora Continua: seguimiento_pmo_mejora_continua.md
