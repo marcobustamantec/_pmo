@@ -2,7 +2,7 @@ site_name: PMO IDIEM
 site_description: Seguimiento de proyectos PMO
 docs_dir: reports
 site_dir: site
-use_directory_urls: true
+use_directory_urls: false # necesario para que los iframes de los Gantt (rutas relativas) funcionen igual en MkDocs y en otros visores
 
 theme:
   name: material

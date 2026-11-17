@@ -33,6 +33,6 @@
       }
     }
   },
-  "postCreateCommand": "python -m pip install --upgrade pip pyyaml mkdocs-material --trusted-host pypi.org --trusted-host files.pythonhosted.org; npm install -g @marp-team/marp-cli --strict-ssl=false || echo 'AVISO: Marp CLI no se pudo instalar (revisar certificados de red)'",
+  "postCreateCommand": "python -m pip install --upgrade pip pyyaml plotly mkdocs-material --trusted-host pypi.org --trusted-host files.pythonhosted.org; npm install -g @marp-team/marp-cli --strict-ssl=false || echo 'AVISO: Marp CLI no se pudo instalar (revisar certificados de red)'",
   "remoteUser": "vscode"
 }
