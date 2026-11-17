@@ -1,0 +1,30 @@
+proyecto:
+  nombre: Migración Administrativa Intranet Azul
+  milestone:
+    - nombre: Flujo de rendiciones UCO
+      wb: 
+      - {nombre: Flujo de rendición de boletas, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+      - {nombre: Flujo de rendición de facturas, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+      - {nombre: Integración rendiciones (informat), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+    - nombre: Flujo de solicitudes UCO
+      wb:
+      - {nombre: Flujo de solicitud de provisorios, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+      - {nombre: Flujo de solicitud de caja chica, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+    - nombre: Migración Control de Gestión
+      wb:
+      - {nombre: Presupuesto e imprevistos, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+      - {nombre: Provisiones y reversas, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+      - {nombre: Traspasos internos, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+      - {nombre: Publicación de Centro de costos IDIEM, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Reportes, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+    - nombre: Asistencia RRHH
+      wb:
+      - {nombre: Solicitud de horas extra RRHH, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+      - {nombre: Modificaciones API Justificaciones (UCampus), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      - {nombre: Modificaciones API Omisiones (UCampus), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      - {nombre: Migración reloj control (ADI), tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+    - nombre: Módulos misceláneos
+      wb:
+      - {nombre: Emisión de cheques UCO, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      - {nombre: Generador números únicos de oficios, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+      - {nombre: Módulo SST / Licencias de conducir, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}

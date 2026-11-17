@@ -1,0 +1,49 @@
+proyecto:
+  nombre: Plataforma 3.0
+  milestone:
+    - nombre: Piloto (desarrollos)
+      wb:
+      - {nombre: Módulo Servicios informes (filtros), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Corrección de informes con mal clasificados, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+      - {nombre: Bloqueo Intranet Azul para evitar informes mal clasificados, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Dashboard (genérico) Release Piloto, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Actualización campos fecha de ensayo (inicio, termino), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+    - nombre: Release Áridos/ Químicos
+      wb:
+      - {nombre: Módulo Resultados (aridos, químicos) : Muestreo y Ensayos , tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+    - nombre: UX/UI Agencia
+      wb:
+      - {nombre: Ajustes UX/ UI, tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+    - nombre: Release Hormigones
+      wb:
+      - {nombre: Migración data (muestreo y samplings > capa 2), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Módulo Resultados hormigones (Muestreo y Ensayos) , tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+      - {nombre: Libro de obras, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Módulo de Administración FTP / Integración, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Análisis y tendencias (UX/UI), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      - {nombre: Email de alertas clientes, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      - {nombre: Análisis y tendencias (migración data y calculos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Migración alertas operacionales internas Hormigones, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+    - nombre: Release Sensores
+      wb:
+      - {nombre: Módulos de administración de proyectos, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Gráficos inclinómetros, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Gráficos acelerómetros, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Gráficos Strain Gages, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Modificación gestión de permisos de usuario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Alertas internas por intermitencia, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+      - {nombre: Mejora continua (nuevas alertas y nuevas funcionalidades), tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+      - {nombre: Dashboard de inicio, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
+    - nombre: Release Aceros
+      wb:
+      - {nombre: Servicios Aceros Muestreo y ensayos para informes DAC, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+    - nombre: Release Suelos
+      wb:
+      - {nombre: Servicios cd Muestreo y ensayos e informes DGL (suelos), tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+    - nombre: Mejoras evolutivas plataforma
+      wb:
+      - {nombre: Dashboard DHI (cementos, áridos, químicos), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      - {nombre: Dashboard Hormigones, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Dashboard DAC, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+      - {nombre: Dashboard DGL (suelos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
