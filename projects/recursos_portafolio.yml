@@ -1,0 +1,61 @@
+# Catálogo transversal de recursos del portafolio.
+# disponibilidad: fracción de jornada disponible para proyectos (0.0 a 1.0).
+# ausencias: fechas inclusivas; durante ese período la capacidad es 0%.
+#
+# Toda persona asignada en los YAML de proyectos debe tener el mismo código
+# en este archivo. Si no aparece aquí, se considera disponible al 100%.
+
+funcionarios:
+  DG:
+    nombre: Desarrollador DG
+    rol: junior
+    disponibilidad: 0.80
+    ausencias:
+      - desde: 2026-12-21
+        hasta: 2026-12-31
+
+  JP:
+    nombre: Desarrollador JP
+    rol: junior
+    disponibilidad: 1.00
+    ausencias: []
+
+  NM:
+    nombre: Desarrollador NM
+    rol: junior
+    disponibilidad: 0.75
+    ausencias: []
+
+  OS:
+    nombre: Desarrollador OS
+    rol: junior
+    disponibilidad: 1.00
+    ausencias:
+      - desde: 2027-01-04
+        hasta: 2027-01-08
+
+  NS:
+    nombre: Senior NS
+    rol: senior
+    disponibilidad: 0.60
+    ausencias:
+      - desde: 2026-12-24
+        hasta: 2026-12-31
+
+  EM:
+    nombre: Senior EM
+    rol: senior
+    disponibilidad: 0.80
+    ausencias: []
+
+  IV:
+    nombre: Senior IV
+    rol: senior
+    disponibilidad: 0.50
+    ausencias: []
+
+  CG:
+    nombre: Senior CG
+    rol: senior
+    disponibilidad: 0.40
+    ausencias: []

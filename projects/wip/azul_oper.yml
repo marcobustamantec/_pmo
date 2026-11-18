@@ -1,0 +1,139 @@
+proyecto:
+  nombre: Migración Hormigones Intranet Azul
+  milestone:
+    - nombre: Prueba de concepto muestreo
+      wb:
+        - {
+            nombre: Mejoras formulario dinámico web/app,
+            tamaño: L,
+            dias: 35,
+            puntos: 21,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Implementación tipo de servicio hormigones,
+            tamaño: S,
+            dias: 5,
+            puntos: 3,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Nuevas funcionalidades formularios dinámico web/app,
+            tamaño: L,
+            dias: 35,
+            puntos: 21,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Implementar en app soporte caché offline de listados de datos,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+    - nombre: Operación base muestreo
+      wb:
+        - {
+            nombre: Creación monitor de frecuencias,
+            tamaño: L,
+            dias: 35,
+            puntos: 21,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Ajustes/recrear al mantenedor de plantas,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Integración de guías de despacho,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Incorporación del estado "Pérdida por Laboratorio”,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Actualización de ID obras de hormigones por convivencia con sol,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+    - nombre: Ciclo completo muestreo (retiros)
+      wb:
+        - {
+            nombre: Implementar nuevo proceso de retiro,
+            tamaño: XL,
+            dias: 80,
+            puntos: 55,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Migración APP retiro,
+            tamaño: L,
+            dias: 35,
+            puntos: 21,
+            incertidumbre: alta,
+          }
+    - nombre: Integraciones muestreo
+      wb:
+        - {
+            nombre: Ajustar/recrear integración ondemand de clientes,
+            tamaño: S,
+            dias: 5,
+            puntos: 3,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Ajustar/recrear integración FTP a clientes,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Evaluación/implementación mantención muestras antiguas,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Configuración de integración de hormigones a LIMS,
+            tamaño: S,
+            dias: 5,
+            puntos: 3,
+            incertidumbre: alta,
+          }
+    - nombre: Mejora evolutiva muestreo
+      wb:
+        - {
+            nombre: Migración de información base de mantenedores,
+            tamaño: S,
+            dias: 5,
+            puntos: 3,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Generación número de control de obra,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }
+        - {
+            nombre: Carga masiva de programación,
+            tamaño: M,
+            dias: 15,
+            puntos: 8,
+            incertidumbre: alta,
+          }

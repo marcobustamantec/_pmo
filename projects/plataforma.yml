@@ -3,47 +3,459 @@ proyecto:
   milestone:
     - nombre: Piloto (desarrollos)
       wb:
-      - {nombre: Módulo Servicios informes (filtros), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Corrección de informes con mal clasificados, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Bloqueo Intranet Azul para evitar informes mal clasificados, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Dashboard (genérico) Release Piloto, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Actualización campos fecha de ensayo (inicio, termino), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Módulo Servicios informes (filtros)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Corrección de informes con mal clasificados
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          junior:
+            - JP
+          senior: EM
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Bloqueo Intranet Azul para evitar informes mal clasificados
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+            - JP
+          senior: EM
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Dashboard (genérico) Release Piloto
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+          senior: EM
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Actualización campos fecha de ensayo (inicio- termino)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+          senior: IV
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Correcciones detectadas Piloto
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+          # Ordenamiento de filas
+          # Reset de filtros
+          # Resultados de ensayo en ver detalles
+          # Resultados no muestran "10 exp 6"
+          # Puntuación de decimales y datos
+          # Permisos para funcionarios idiem
+          # KPI's de "Servicios completados"
+          # Mejorar formato Hormigones para que se alinie a la plataforma
+          # Descarga de boletas SOL
+          # Integración de cambios en LIMS de datos SOL
+          # Integración de cambios LIMS que interesa publicar en Plataforma y que no viene de LIMS
+
+        - nombre: Integración LIMS > Capa 2
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+            - NM
+          senior: IV
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Integración ProjectUpdate (LIMS > SOL)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
     - nombre: Release Áridos/ Químicos
       wb:
-      - {nombre: Módulo Resultados (aridos, químicos) : Muestreo y Ensayos , tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-    - nombre: UX/UI Agencia
-      wb:
-      - {nombre: Ajustes UX/ UI, tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+        - nombre: Módulo Resultados (aridos/ químicos) - Muestreo y Ensayos
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
     - nombre: Release Hormigones
       wb:
-      - {nombre: Migración data (muestreo y samplings > capa 2), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Módulo Resultados hormigones (Muestreo y Ensayos) , tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Libro de obras, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Módulo de Administración FTP / Integración, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Análisis y tendencias (UX/UI), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Email de alertas clientes, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Análisis y tendencias (migración data y calculos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Migración alertas operacionales internas Hormigones, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-    - nombre: Release Sensores
+        - nombre: Migración data (muestreo y samplings > capa 2)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+          senior: EM
+          dedicacion_sr: 0.5
+          estado: finalizado
+          avance: 1
+
+        - nombre: Módulo Resultados hormigones (Muestreo y Ensayos)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Libro de obras
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Módulo de Administración FTP / Integración
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: wip
+          avance: 0.5
+
+        - nombre: Análisis y tendencias (UX/UI)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Análisis y tendencias (Refactorización Consolidate Data)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          junior:
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Email de alertas clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Migración alertas operacionales internas Hormigones
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+    - nombre: Control de cambios Piloto
       wb:
-      - {nombre: Módulos de administración de proyectos, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Gráficos inclinómetros, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Gráficos acelerómetros, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Gráficos Strain Gages, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Modificación gestión de permisos de usuario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Alertas internas por intermitencia, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Mejora continua (nuevas alertas y nuevas funcionalidades), tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Dashboard de inicio, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
+        - nombre: Perfil de usuario interno
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Mejoras en formato de descargas
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Mejoras en filtros (quedan)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
     - nombre: Release Aceros
       wb:
-      - {nombre: Servicios Aceros Muestreo y ensayos para informes DAC, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Servicios Aceros Muestreo y ensayos para informes DAC
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+    - nombre: Release Sensores
+      wb:
+        - nombre: Módulos de administración de proyectos
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: pausado
+          avance: 0
+
+        - nombre: Gráficos inclinómetros
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Gráficos acelerómetros
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Gráficos Strain Gages
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Modificación gestión de permisos de usuario
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Alertas internas por intermitencia
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
     - nombre: Release Suelos
       wb:
-      - {nombre: Servicios cd Muestreo y ensayos e informes DGL (suelos), tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+        - nombre: Servicios cd Muestreo y ensayos e informes DGL (suelos)
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: media
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+    - nombre: Release Sensores mejora continua
+      wb:
+        - nombre: Mejora continua (nuevas alertas y nuevas funcionalidades)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Dashboard de inicio
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+    - nombre: UX/UI Agencia
+      wb:
+        - nombre: Ajustes UX/ UI
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: media
+          junior:
+            - DG
+            - OS
+          senior: NS
+          dedicacion_sr: 0.4
+          estado: backlog
+          avance: 0
+
     - nombre: Mejoras evolutivas plataforma
       wb:
-      - {nombre: Dashboard DHI (cementos, áridos, químicos), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Dashboard Hormigones, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Dashboard DAC, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Dashboard DGL (suelos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+        - nombre: Dashboard DHI (cementos- áridos- químicos)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          junior:
+            - DG
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Dashboard Hormigones
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Dashboard DAC
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Dashboard DGL (suelos)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+            - OS
+          senior: NS
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
