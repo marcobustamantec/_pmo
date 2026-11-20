@@ -9,27 +9,27 @@ funcionarios:
   DG:
     nombre: Desarrollador DG
     rol: junior
-    disponibilidad: 0.80
+    disponibilidad: 0.90
     ausencias:
-      - desde: 2026-12-21
-        hasta: 2026-12-31
+      - desde: 2026-11-18
+        hasta: 2027-12-31
 
   JP:
     nombre: Desarrollador JP
     rol: junior
-    disponibilidad: 1.00
+    disponibilidad: 0.50
     ausencias: []
 
   NM:
     nombre: Desarrollador NM
     rol: junior
-    disponibilidad: 0.75
+    disponibilidad: 0.9
     ausencias: []
 
   OS:
     nombre: Desarrollador OS
     rol: junior
-    disponibilidad: 1.00
+    disponibilidad: 0.90
     ausencias:
       - desde: 2027-01-04
         hasta: 2027-01-08
@@ -57,5 +57,5 @@ funcionarios:
   CG:
     nombre: Senior CG
     rol: senior
-    disponibilidad: 0.40
+    disponibilidad: 0.80
     ausencias: []

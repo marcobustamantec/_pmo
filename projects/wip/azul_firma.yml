@@ -3,55 +3,235 @@ proyecto:
   milestone:
     - nombre: Blueprint Firmador
       wb:
-      - {nombre: Modelo de datos y arquitectura, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Plan detallado, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: UX/ UI Firmador, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Modelo de datos y arquitectura
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Plan detallado
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: UX/ UI Firmador
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Integraciones Firmador
       wb:
-      - {nombre: Integración FEA Core (IDIEM Signature), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Plataforma Capa 2, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Mensajería éxito/ fallo, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Integración API Documents (end point), tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Integración API Core (sampling), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Integración LIMS, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Tareas programadas de cierre transacciones, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: idiem AUTH, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Integración FEA Core (IDIEM Signature)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Plataforma Capa 2
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Mensajería éxito/ fallo
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Integración API Documents (end point)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Integración API Core (sampling)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Integración LIMS
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Tareas programadas de cierre transacciones
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: idiem AUTH
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Interfaz de usuario Firmador
       wb:
-      - {nombre: Bandeja de validación, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Bandeja de firma, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Visualización de documentos individual, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Visualización de documentos masiva, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Descarga de documentos, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Filtros de búsqueda / paginación, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+        - nombre: Bandeja de validación
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Bandeja de firma
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Visualización de documentos individual
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Visualización de documentos masiva
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Descarga de documentos
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Filtros de búsqueda / paginación
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
     - nombre: Flujo unitario Firmador
       wb:
-      - {nombre: Carga manual de documentos, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Firma unitario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Rechazo unitario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Anulación unitaria, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Validación unitaria, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Carga manual de documentos
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Firma unitario
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Rechazo unitario
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Anulación unitaria
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Validación unitaria
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Flujo masivo Firmador
       wb:
-      - {nombre: Firma masiva, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Rechazo masivo, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Anular masivo, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Validación masiva, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Firma masiva
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Rechazo masivo
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Anular masivo
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Validación masiva
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Funciones adicionales Firmador
       wb:
-      - {nombre: Anular masivo modo admin, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Indicadores, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Reportes, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Gestión de metadatos, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Integración vía WS Ares - cartas de anulación, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Integración con clientes (REVISAR), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Anular masivo modo admin
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Indicadores
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Reportes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Gestión de metadatos
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Integración vía WS Ares - cartas de anulación
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Integración con clientes (REVISAR)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Tareas background Intranet Azul
       wb:
-      - {nombre: Tareas programadas background (crones), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Tareas programadas background (crones)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Servicios a clientes Intranet Azul
       wb:
-      - {nombre: API entre idiem y clientes, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Plataforma AZA, tamaño: indef, dias: , puntos: , incertidumbre: media}
+        - nombre: API entre idiem y clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Plataforma AZA
+          tamaño: indef
+          dias
+          puntos
+          incertidumbre: media
+          
     - nombre: Rúbrica Firmador
       wb:
-      - {nombre: Posición rúbrica, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+        - nombre: Posición rúbrica
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          

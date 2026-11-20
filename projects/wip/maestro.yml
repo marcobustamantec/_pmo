@@ -2,224 +2,933 @@ proyecto:
   nombre: test 01. POC
   milestone:
     - nombre: Flujo de rendiciones UCO
-      wb: 
-      - {nombre: Flujo de rendición de boletas, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Flujo de rendición de facturas, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Integración rendiciones (informat), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+      wb:
+        - nombre: Flujo de rendición de boletas
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Flujo de rendición de facturas
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Integración rendiciones (informat)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
     - nombre: Flujo de solicitudes UCO
       wb:
-      - {nombre: Flujo de solicitud de provisorios, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Flujo de solicitud de caja chica, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+        - nombre: Flujo de solicitud de provisorios
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Flujo de solicitud de caja chica
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
     - nombre: Idiem Auth
       wb:
-      - {nombre: Autenticación IntraDTI, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Autenticación IntraDTI
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Migración Control de Gestión
       wb:
-      - {nombre: Presupuesto e imprevistos, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Provisiones y reversas, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Traspasos internos, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Publicación de Centro de costos IDIEM, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Reportes, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Presupuesto e imprevistos
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Provisiones y reversas
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Traspasos internos
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Publicación de Centro de costos IDIEM
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Reportes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Asistencia RRHH
       wb:
-      - {nombre: Solicitud de horas extra RRHH, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Modificaciones API Justificaciones (UCampus), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Modificaciones API Omisiones (UCampus), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Migración reloj control (ADI), tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+        - nombre: Solicitud de horas extra RRHH
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Modificaciones API Justificaciones (UCampus)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Modificaciones API Omisiones (UCampus)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Migración reloj control (ADI)
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: media
+          
     - nombre: Módulos misceláneos
       wb:
-      - {nombre: Emisión de cheques UCO, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Generador números únicos de oficios, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Módulo SST / Licencias de conducir, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+        - nombre: Emisión de cheques UCO
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Generador números únicos de oficios
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Módulo SST / Licencias de conducir
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
     - nombre: Mejoras técnicas idiem.cl
       wb:
-      - {nombre: Landing page Geomensura, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: URL dinámicas, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Landing page Autogestionado, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Landing page Geomensura
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: URL dinámicas
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Landing page Autogestionado
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Despliegue productivo Sensores
       wb:
-      - {nombre: Backend nube,tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Migración data histórica, tamaño: L, dias: 35, puntos: 21, incertidumbre: baja}
+        - nombre: Backend nube
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Migración data histórica
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: baja
+          
     - nombre: Piloto (desarrollos)
       wb:
-      - {nombre: Módulo Servicios informes (filtros), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Módulo Servicios informes (filtros)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Piloto (dependencias)
       wb:
-      - {nombre: Corrección de informes con mal clasificados, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Bloqueo Intranet Azul para evitar informes mal clasificados, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Dashboard (genérico) Release Piloto, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Actualización campos fecha de ensayo (inicio, termino), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Corrección de informes con mal clasificados
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Bloqueo Intranet Azul para evitar informes mal clasificados
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Dashboard (genérico) Release Piloto
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Actualización campos fecha de ensayo (inicio
+          termino)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Release Áridos/ Químicos
       wb:
-      - {nombre: Módulo Resultados (aridos, químicos) : Muestreo y Ensayos , tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Módulo Resultados (aridos
+          químicos): Muestreo y Ensayos
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Piloto (UX/UI Agencia)
       wb:
-      - {nombre: Ajustes UX/ UI, tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+        - nombre: Ajustes UX/ UI
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: media
+          
     - nombre: Release Hormigones
       wb:
-      - {nombre: Migración data (muestreo y samplings > capa 2), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Módulo Resultados hormigones (Muestreo y Ensayos) , tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Libro de obras, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Módulo de Administración FTP / Integración, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Análisis y tendencias (UX/UI), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Email de alertas clientes, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Análisis y tendencias (migración data y calculos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Migración alertas operacionales internas Hormigones, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+        - nombre: Migración data (muestreo y samplings > capa 2)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Módulo Resultados hormigones (Muestreo y Ensayos)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Libro de obras
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Módulo de Administración FTP / Integración
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Análisis y tendencias (UX/UI)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Email de alertas clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Análisis y tendencias (migración data y calculos)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Migración alertas operacionales internas Hormigones
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
     - nombre: Release Sensores
       wb:
-      - {nombre: Módulos de administración de proyectos, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Gráficos inclinómetros, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Gráficos acelerómetros, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Gráficos Strain Gages, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Modificación gestión de permisos de usuario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Alertas internas por intermitencia, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Mejora continua (nuevas alertas y nuevas funcionalidades), tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Dashboard de inicio, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
+        - nombre: Módulos de administración de proyectos
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Gráficos inclinómetros
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Gráficos acelerómetros
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Gráficos Strain Gages
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Modificación gestión de permisos de usuario
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Alertas internas por intermitencia
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Mejora continua (nuevas alertas y nuevas funcionalidades)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Dashboard de inicio
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          
     - nombre: Release Aceros
       wb:
-      - {nombre: Servicios Aceros Muestreo y ensayos para informes DAC, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Servicios Aceros Muestreo y ensayos para informes DAC
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Release Suelos
       wb:
-      - {nombre: Servicios cd Muestreo y ensayos e informes DGL (suelos), tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
+        - nombre: Servicios cd Muestreo y ensayos e informes DGL (suelos)
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: media
+          
     - nombre: Mejoras evolutivas plataforma
       wb:
-      - {nombre: Dashboard DHI (cementos, áridos, químicos), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Dashboard Hormigones, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Dashboard DAC, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Dashboard DGL (suelos), tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+        - nombre: Dashboard DHI (cementos
+          áridos
+          químicos)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Dashboard Hormigones
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Dashboard DAC
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Dashboard DGL (suelos)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
     - nombre: Integraciones con clientes
       wb:
-      - {nombre: API Fenix AZA, release LIMS, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: ARES release LIMS, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: API Fenix AZA
+          release LIMS
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: ARES release LIMS
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Blueprint Firmador
       wb:
-      - {nombre: Modelo de datos y arquitectura, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Plan detallado, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: UX/ UI Firmador, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Modelo de datos y arquitectura
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Plan detallado
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: UX/ UI Firmador
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Integraciones Firmador
       wb:
-      - {nombre: Integración FEA Core (IDIEM Signature), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Plataforma Capa 2, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Mensajería éxito/ fallo, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Integración API Documents (end point), tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Integración API Core (sampling), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Integración LIMS, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Tareas programadas de cierre transacciones, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: idiem AUTH, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Integración FEA Core (IDIEM Signature)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Plataforma Capa 2
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Mensajería éxito/ fallo
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Integración API Documents (end point)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Integración API Core (sampling)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Integración LIMS
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Tareas programadas de cierre transacciones
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: idiem AUTH
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Interfaz de usuario Firmador
       wb:
-      - {nombre: Bandeja de validación, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Bandeja de firma, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Visualización de documentos individual, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Visualización de documentos masiva, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Descarga de documentos, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Filtros de búsqueda / paginación, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
+        - nombre: Bandeja de validación
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Bandeja de firma
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Visualización de documentos individual
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Visualización de documentos masiva
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Descarga de documentos
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Filtros de búsqueda / paginación
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
     - nombre: Flujo unitario Firmador
       wb:
-      - {nombre: Carga manual de documentos, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Firma unitario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Rechazo unitario, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Anulación unitaria, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Validación unitaria, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Carga manual de documentos
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Firma unitario
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Rechazo unitario
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Anulación unitaria
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Validación unitaria
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Flujo masivo Firmador
       wb:
-      - {nombre: Firma masiva, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Rechazo masivo, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Anular masivo, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
-      - {nombre: Validación masiva, tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Firma masiva
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Rechazo masivo
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Anular masivo
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
+        - nombre: Validación masiva
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Funciones adicionales Firmador
       wb:
-      - {nombre: Anular masivo modo admin, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Indicadores, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Reportes, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Gestión de metadatos, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Integración vía WS Ares - cartas de anulación, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Integración con clientes (REVISAR), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Anular masivo modo admin
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Indicadores
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Reportes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Gestión de metadatos
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Integración vía WS Ares - cartas de anulación
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Integración con clientes (REVISAR)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Tareas background Intranet Azul
       wb:
-      - {nombre: Tareas programadas background (crones), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: Tareas programadas background (crones)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Servicios a clientes Intranet Azul
       wb:
-      - {nombre: API entre idiem y clientes, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Plataforma AZA, tamaño: indef, dias: , puntos: , incertidumbre: media}
+        - nombre: API entre idiem y clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Plataforma AZA
+          tamaño: indef
+          dias
+          puntos
+          incertidumbre: media
+          
     - nombre: Rúbrica Firmador
       wb:
-      - {nombre: Posición rúbrica, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+        - nombre: Posición rúbrica
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
     - nombre: Prueba de concepto muestreo
       wb:
-      - {nombre: Mejoras formulario dinámico web/app, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Implementación tipo de servicio hormigones, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
-      - {nombre: Nuevas funcionalidades formularios dinámico web/app, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Implementar en app soporte caché offline de listados de datos, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+        - nombre: Mejoras formulario dinámico web/app
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Implementación tipo de servicio hormigones
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          
+        - nombre: Nuevas funcionalidades formularios dinámico web/app
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Implementar en app soporte caché offline de listados de datos
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
     - nombre: Operación base muestreo
       wb:
-      - {nombre: Creación monitor de frecuencias, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Ajustes/recrear al mantenedor de plantas, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Integración de guías de despacho, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Incorporación del estado "Pérdida por Laboratorio”, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Actualización de ID obras de hormigones por convivencia con sol, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+        - nombre: Creación monitor de frecuencias
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Ajustes/recrear al mantenedor de plantas
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Integración de guías de despacho
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Incorporación del estado "Pérdida por Laboratorio”
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Actualización de ID obras de hormigones por convivencia con sol
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
     - nombre: Ciclo completo muestreo (retiros)
       wb:
-      - {nombre: Implementar nuevo proceso de retiro, tamaño: XL, dias: 80, puntos: 55, incertidumbre: alta}
-      - {nombre: Migración APP retiro, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+        - nombre: Implementar nuevo proceso de retiro
+          tamaño: XL
+          dias: 80
+          puntos: 55
+          incertidumbre: alta
+          
+        - nombre: Migración APP retiro
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
     - nombre: Integraciones muestreo
       wb:
-      - {nombre: Ajustar/recrear integración ondemand de clientes, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
-      - {nombre: Ajustar/recrear integración FTP a clientes , tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Evaluación/implementación mantención muestras antiguas, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Configuración de integración de hormigones a LIMS, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
+        - nombre: Ajustar/recrear integración ondemand de clientes
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          
+        - nombre: Ajustar/recrear integración FTP a clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Evaluación/implementación mantención muestras antiguas
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Configuración de integración de hormigones a LIMS
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          
     - nombre: Mejora evolutiva muestreo
       wb:
-      - {nombre: Migración de información base de mantenedores, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
-      - {nombre: Generación número de control de obra, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Carga masiva de programación, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
+        - nombre: Migración de información base de mantenedores
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          
+        - nombre: Generación número de control de obra
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Carga masiva de programación
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
     - nombre: APIs entre aplicaciones idiem
       wb:
-      - {nombre: Migración API Facturación (ADI/ Boleta exenta), tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Integración Salesforce/ Timesheet, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Migración API Facturación (ADI/ Boleta exenta)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Integración Salesforce/ Timesheet
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Integraciones Odoo
       wb:
-      - {nombre: API Salesforce Odoo (T:506566), tamaño: indef, dias: , puntos: , incertidumbre: baja}
-      - {nombre: Integración Odoo/ Emisión OC (sólo creación), tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Integración Odoo / Ciclo de vida OC (completo), tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Intregración Odoo/ CC idiem, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Sincronización de cuentas contables Odoo, tamaño: indef, dias: , puntos: , incertidumbre: media}
-      - {nombre: Integración Odoo / SOL (T:780447), tamaño: S, dias: 5, puntos: 3, incertidumbre: baja}
+        - nombre: API Salesforce Odoo (T:506566)
+          tamaño: indef
+          dias
+          puntos
+          incertidumbre: baja
+          
+        - nombre: Integración Odoo/ Emisión OC (sólo creación)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Integración Odoo / Ciclo de vida OC (completo)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Intregración Odoo/ CC idiem
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Sincronización de cuentas contables Odoo
+          tamaño: indef
+          dias
+          puntos
+          incertidumbre: media
+          
+        - nombre: Integración Odoo / SOL (T:780447)
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          
     - nombre: Upgrade frameworks
       wb:
-      - {nombre: Upgrade Boleta Digital, tamaño: L, dias: 35, puntos: 21, incertidumbre: media}
-      - {nombre: Upgrade API Core (v20- LTS), tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Upgrade SOL, tamaño: L, dias: 35, puntos: 21, incertidumbre: baja}
-      - {nombre: Upgrade SOL App, tamaño: L, dias: 35, puntos: 21, incertidumbre: baja}
-      - {nombre: Upgrade SOL API / SOL CORE, tamaño: L, dias: 35, puntos: 21, incertidumbre: baja}
-      - {nombre: Upgrade IntraDTI, tamaño: L, dias: 35, puntos: 21, incertidumbre: baja}
-      - {nombre: Upgrade Mi Idiem, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
-      - {nombre: Upgrade idiem.cl, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Upgrade Boleta Digital
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: media
+          
+        - nombre: Upgrade API Core (v20- LTS)
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Upgrade SOL
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: baja
+          
+        - nombre: Upgrade SOL App
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: baja
+          
+        - nombre: Upgrade SOL API / SOL CORE
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: baja
+          
+        - nombre: Upgrade IntraDTI
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: baja
+          
+        - nombre: Upgrade Mi Idiem
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
+        - nombre: Upgrade idiem.cl
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Tickets e issues correctivos
       wb:
-      - {nombre: Tickets e issues Boleta Digital, tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Tickets e issues Intranet Azul, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Tickets e issues IntranetDTI, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Tickets e issues SOL, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Tickets e issues Plataforma de clientes, tamaño: M, dias: 15, puntos: 8, incertidumbre: baja}
+        - nombre: Tickets e issues Boleta Digital
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Tickets e issues Intranet Azul
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Tickets e issues IntranetDTI
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Tickets e issues SOL
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Tickets e issues Plataforma de clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          
     - nombre: Mejoras técnicas IntraDTI
       wb:
-      - {nombre: Mejoras flujo de contrataciones, tamaño: XL, dias: 80, puntos: 55, incertidumbre: alta}
-      - {nombre: Módulo de Facturación (control de cambios), tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-      - {nombre: Emisión centralizada estados de pago, tamaño: XXL, dias: 100, puntos: 124, incertidumbre: alta}
-      - {nombre: Flujo de retención de boletas de garantía, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+        - nombre: Mejoras flujo de contrataciones
+          tamaño: XL
+          dias: 80
+          puntos: 55
+          incertidumbre: alta
+          
+        - nombre: Módulo de Facturación (control de cambios)
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
+        - nombre: Emisión centralizada estados de pago
+          tamaño: XXL
+          dias: 100
+          puntos: 124
+          incertidumbre: alta
+          
+        - nombre: Flujo de retención de boletas de garantía
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
     - nombre: Mejoras técnicas SOL
       wb:
-      - {nombre: Reemplazo "obra" por "oportunidad", tamaño: S, dias: 5, puntos: 3, incertidumbre: media}
-      - {nombre: Logs de registro de transacciones SOL, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
-      - {nombre: Solución SOL APP borrado de BD, tamaño: M, dias: 15, puntos: 8, incertidumbre: media}
+        - nombre: Reemplazo "obra" por "oportunidad"
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          
+        - nombre: Logs de registro de transacciones SOL
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
+        - nombre: Solución SOL APP borrado de BD
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          
     - nombre: Mejoras evolutivas hormigón
       wb:
-      - {nombre: Correcciones planilla de descarga retiros, tamaño: S, dias: 5, puntos: 3, incertidumbre: alta}
-      - {nombre: Módulo de facturación en zonales (samplings), tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
+        - nombre: Correcciones planilla de descarga retiros
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          
+        - nombre: Módulo de facturación en zonales (samplings)
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          
     - nombre: Sensores de temperatura
       wb:
-      - {nombre: Dashboard interno, tamaño: M, dias: 15, puntos: 8, incertidumbre: alta}
-      - {nombre: Dashboard clientes, tamaño: L, dias: 35, puntos: 21, incertidumbre: alta}
-
+        - nombre: Dashboard interno
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          
+        - nombre: Dashboard clientes
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          

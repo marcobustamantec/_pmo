@@ -1,5 +1,6 @@
 proyecto:
   nombre: Plataforma 3.0
+  prioridad: 1
   milestone:
     - nombre: Piloto (desarrollos)
       wb:

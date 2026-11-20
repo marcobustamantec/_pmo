@@ -1,0 +1,215 @@
+proyecto:
+  nombre: Migración Hormigones Intranet Azul
+  prioridad: 1
+  milestone:
+    - nombre: Prueba de concepto muestreo
+      wb:
+        - nombre: Mejoras formulario dinámico web/app
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: finalizado
+          avance: 1
+
+        - nombre: Implementación tipo de servicio hormigones
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: media
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+        - nombre: Nuevas funcionalidades formularios dinámico web/app
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+        - nombre: Implementar en app soporte caché offline de listados de datos
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: media
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+    - nombre: Operación base muestreo
+      wb:
+        - nombre: Creación monitor de frecuencias
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+        - nombre: Ajustes/recrear al mantenedor de plantas
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+        - nombre: Integración de guías de despacho
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+        - nombre: Incorporación del estado "Pérdida por Laboratorio”
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+        - nombre: Actualización de ID obras de hormigones por convivencia con sol
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior: CG
+          dedicacion_sr: 0.8
+          estado: backlog
+          avance: 0
+
+    - nombre: Ciclo completo muestreo (retiros)
+      wb:
+        - nombre: Implementar nuevo proceso de retiro
+          tamaño: XL
+          dias: 80
+          puntos: 55
+          incertidumbre: alta
+          junior:
+            - RS
+          senior: CG
+          dedicacion_sr: 0.1
+          estado: wip
+          avance: 0.1
+
+        - nombre: Migración APP retiro
+          tamaño: L
+          dias: 35
+          puntos: 21
+          incertidumbre: alta
+          junior:
+            - RS
+          senior: CG
+          dedicacion_sr: 0.1
+          estado: backlog
+          avance: 0
+
+    - nombre: Integraciones muestreo
+      wb:
+        - nombre: Ajustar/recrear integración ondemand de clientes
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          junior:
+            - NM
+          senior: EM
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: cancelado
+
+        - nombre: Ajustar/recrear integración FTP a clientes
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+            - NM
+          senior: EM
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+        - nombre: Evaluación/implementación mantención muestras antiguas
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: baja
+          junior:
+          senior: EM
+          dedicacion_sr: 0.2
+          estado: finalizado
+          avance: 1
+
+        - nombre: Configuración de integración de hormigones a LIMS
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: baja
+          junior:
+          senior: CG
+          dedicacion_sr: 0.2
+          estado: backlog
+          avance: 0
+
+    - nombre: Mejora evolutiva muestreo
+      wb:
+        - nombre: Migración de información base de mantenedores
+          tamaño: S
+          dias: 5
+          puntos: 3
+          incertidumbre: alta
+          junior:
+          senior:
+          dedicacion_sr:
+          estado:
+          avance:
+
+        - nombre: Generación número de control de obra
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior:
+          dedicacion_sr:
+          estado:
+          avance:
+
+        - nombre: Carga masiva de programación
+          tamaño: M
+          dias: 15
+          puntos: 8
+          incertidumbre: alta
+          junior:
+          senior:
+          dedicacion_sr:
+          estado:
+          avance:
