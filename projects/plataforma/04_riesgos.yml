@@ -1,0 +1,59 @@
+# 04_riesgos.yml
+# prob: baja | media | alta      impacto: bajo | medio | alto
+# El nivel (crítico / alto / moderado / bajo) se calcula solo. Para forzarlo agrega: nivel: critico
+# Estados: identificado | en_tratamiento | materializado | cerrado  (los "cerrado" no se muestran)
+
+riesgos:
+  - id: R-001
+    titulo: Disponibilidad de información histórica
+    prob: alta
+    impacto: alto
+    estado: en_tratamiento
+    accion: Identificar fuentes, evaluar calidad de los datos y definir incorporación progresiva
+    contingencia: Habilitar primero la información disponible e incorporar fuentes históricas después
+    resp: Líder técnico
+    fecha: 2026-12-15
+
+  - id: R-002
+    titulo: Dependencia de integraciones institucionales
+    prob: media
+    impacto: alto
+    estado: en_tratamiento
+    accion: Identificar sistemas y responsables, definir contratos de servicio y probar integraciones temprano
+    contingencia: Carga intermedia y priorizar integraciones esenciales para la primera versión
+    resp: Líder de desarrollo
+    fecha: 2026-12-10
+
+  - id: R-003
+    titulo: Control de acceso a información de clientes
+    prob: media
+    impacto: alto
+    estado: identificado
+    accion: Modelo de autorización por cliente, controles a nivel de documento, pruebas de aislamiento y registro de accesos
+    contingencia: Suspender accesos afectados y activar protocolo de respuesta a incidentes
+    resp: Responsable de seguridad TI
+    fecha: 2026-12-15
+
+  - id: R-004
+    titulo: Calidad y consistencia de los documentos descargables
+    prob: media
+    impacto: medio
+    estado: identificado
+    accion: Identificadores únicos, validación de integridad y vigencia, reglas de versionamiento
+    contingencia: Deshabilitar descarga de documentos afectados y publicarlos nuevamente
+    resp: Analista funcional
+    fecha: 2027-01-15
+
+# Un problema "materializado" aparece además como bloqueo activo.
+problemas:
+  - id: P-001
+    titulo: Definición pendiente del mecanismo de autenticación
+    impacto: alto
+    estado: materializado
+    efecto: Impide cerrar el diseño de acceso de usuarios y condiciona las pruebas integrales
+    accion: Validar alternativas, acordar el mecanismo con responsables institucionales e implementarlo
+    resp: Jefe de proyecto
+    fecha: 2026-12-05
+
+# Opcional: riesgos emergentes del período
+emergentes: []

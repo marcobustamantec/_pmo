@@ -1,0 +1,26 @@
+# 01_definicion.yml — Se completa una vez y se toca poco.
+id: PLAT-001
+nombre: Plataforma de Clientes
+subtitulo: Acceso digital a informes históricos y resultados de ensayos
+responsable: Célula de clientes
+
+periodo: { desde: 2026-11-01, hasta: 2026-11-30 }
+fecha_reporte: 2026-11-24
+
+objetivo: >
+  Implementar una plataforma digital que permita a los clientes consultar sus
+  informes históricos y resultados de ensayos, facilitando el acceso oportuno,
+  seguro y centralizado a la información generada por IDIEM.
+
+alcance:
+  - Consulta de informes históricos
+  - Consulta de resultados de ensayos
+  - Visualización digital de documentos
+  - Descarga de informes y resultados
+  - Acceso seguro mediante autenticación
+
+resultados_esperados:
+  - Clientes consultan sus informes sin solicitarlos manualmente
+  - Clientes acceden a planillas consolidadas de sus resultados
+
+# cambios_alcance: Sin cambios aprobados en el período.

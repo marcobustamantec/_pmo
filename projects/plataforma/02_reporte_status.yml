@@ -1,0 +1,103 @@
+semaforo: amarillo # verde | amarillo | rojo  (si lo borras, se calcula según la desviación)
+tendencia: estable # mejora | estable | empeora
+fase: Desarrollo # Diseño | Desarrollo | QA | Despliegue
+
+avance:
+  planificado: -- # %
+  real: # % (si lo borras, se calcula con los puntos de 03_milestones.yml)
+
+fechas:
+  inicio: 2026-08-01
+  termino_plan: 2027-03-31
+  termino_estimado: 2027-04-30
+
+situacion: >
+  El proyecto se encuentra en fase de desarrollo. Se ha avanzado en la
+  definición funcional y en la construcción de los componentes principales
+  de la plataforma.
+
+fase_actual:
+
+avances:
+  - Definición de alcance funcional
+  - Diseño de arquitectura de solución
+  - Desarrollo de componentes iniciales
+
+alertas:
+  - Dependencia de disponibilidad y calidad de datos históricos
+  - Definición de mecanismos de integración con sistemas institucionales
+
+desviacion: # revisar / completar
+  causa: Dependencia de datos históricos e integraciones, y definición pendiente de autenticación.
+  accion: Cerrar autenticación e integraciones; incorporar datos históricos de forma progresiva.
+
+siguiente_hito:
+  nombre: Primera versión funcional para validación
+  fecha: 2026-12-15
+  criterio: Versión funcional disponible para validación
+  # responsable: (si se omite, usa el de 01_definicion.yml)
+
+# Un renglón por dependencia externa. Estados: pendiente | en_curso | resuelto
+dependencias:
+  - {
+      dep: Datos históricos de informes y ensayos,
+      contraparte: Por definir,
+      req: Fuentes disponibles y con calidad validada,
+      fecha: 2026-12-15,
+      estado: pendiente,
+    }
+  - {
+      dep: Integración con sistemas institucionales,
+      contraparte: Responsables de sistemas,
+      req: Contratos de servicio e interfaces,
+      fecha: 2026-12-10,
+      estado: en_curso,
+    }
+
+# Los bloqueos se toman solos de los "problemas" materializados en 04_riesgos.yml
+apoyo: Acordar con los responsables institucionales el mecanismo de autenticación.
+
+# Capacidad: la tabla de personas se calcula desde 03_milestones.yml.
+# Aquí solo lo que quieras agregar a mano (opcional):
+alertas_capacidad: []
+impacto_capacidad: ""
+
+proximos_pasos:
+  - {
+      accion: Validar disponibilidad y calidad de datos históricos,
+      resp: Líder técnico,
+      fecha: 2026-12-15,
+      resultado: Diagnóstico de fuentes y calidad,
+    }
+  - {
+      accion: Cerrar definición de autenticación,
+      resp: Jefe de proyecto,
+      fecha: 2026-12-05,
+      resultado: Mecanismo acordado,
+    }
+  - {
+      accion: Acordar integraciones con sistemas institucionales,
+      resp: Líder de desarrollo,
+      fecha: 2026-12-10,
+      resultado: Contratos de servicio definidos,
+    }
+  - {
+      accion: Entregar primera versión funcional para validación,
+      resp: Líder de desarrollo,
+      fecha: 2026-12-15,
+      resultado: Versión validada,
+    }
+# foco:                 # opcional; si se omite usa las 3 primeras acciones
+#   - Cerrar autenticación
+
+decisiones:
+  - {
+      decision: Mecanismo de autenticación y vinculación de usuarios con cuentas de clientes,
+      quien: Jefe de proyecto / responsables institucionales,
+      fecha: 2026-12-05,
+      estado: pendiente,
+    }
+
+conclusion: >
+  El proyecto avanza con una desviación moderada. Cumplir los próximos
+  compromisos depende de cerrar la autenticación y asegurar los datos históricos.

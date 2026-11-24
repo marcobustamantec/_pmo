@@ -3,6 +3,7 @@ proyecto:
   prioridad: 1
   milestone:
     - nombre: Piloto (desarrollos)
+      descripcion: Fase inicial operativa integrada con LIMS
       wb:
         - nombre: Módulo Servicios informes (filtros)
           tamaño: S
@@ -121,6 +122,7 @@ proyecto:
           avance: 0
 
     - nombre: Release Áridos/ Químicos
+      descripcion: Entrega de resultados para los servicios de ensayos áridos y de químicos
       wb:
         - nombre: Módulo Resultados (aridos/ químicos) - Muestreo y Ensayos
           tamaño: M
@@ -135,6 +137,7 @@ proyecto:
           avance: 1
 
     - nombre: Release Hormigones
+      descripcion: Entrega de resultados para los servicios de hormigones
       wb:
         - nombre: Migración data (muestreo y samplings > capa 2)
           tamaño: S
@@ -231,6 +234,7 @@ proyecto:
           avance: 0
 
     - nombre: Control de cambios Piloto
+      descripcion:
       wb:
         - nombre: Perfil de usuario interno
           tamaño: S
@@ -269,6 +273,7 @@ proyecto:
           avance: 0
 
     - nombre: Release Aceros
+      descripcion: Entrega de resultados para los servicios de aceros
       wb:
         - nombre: Servicios Aceros Muestreo y ensayos para informes DAC
           tamaño: M
