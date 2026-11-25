@@ -1,934 +1,1070 @@
 proyecto:
   nombre: test 01. POC
-  milestone:
-    - nombre: Flujo de rendiciones UCO
-      wb:
-        - nombre: Flujo de rendición de boletas
+  entregas:
+    - hito: Flujo de rendiciones UCO
+      tareas:
+        - wb: Flujo de rendición de boletas
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Flujo de rendición de facturas
+          estado:
+          avance:
+
+        - wb: Flujo de rendición de facturas
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Integración rendiciones (informat)
+          estado:
+          avance:
+
+        - wb: Integración rendiciones (informat)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Flujo de solicitudes UCO
-      wb:
-        - nombre: Flujo de solicitud de provisorios
+          estado:
+          avance:
+
+    - hito: Flujo de solicitudes UCO
+      tareas:
+        - wb: Flujo de solicitud de provisorios
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Flujo de solicitud de caja chica
+          estado:
+          avance:
+
+        - wb: Flujo de solicitud de caja chica
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Idiem Auth
-      wb:
-        - nombre: Autenticación IntraDTI
+          estado:
+          avance:
+
+    - hito: Idiem Auth
+      tareas:
+        - wb: Autenticación IntraDTI
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Migración Control de Gestión
-      wb:
-        - nombre: Presupuesto e imprevistos
+          estado:
+          avance:
+
+    - hito: Migración Control de Gestión
+      tareas:
+        - wb: Presupuesto e imprevistos
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Provisiones y reversas
+          estado:
+          avance:
+
+        - wb: Provisiones y reversas
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Traspasos internos
+          estado:
+          avance:
+
+        - wb: Traspasos internos
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Publicación de Centro de costos IDIEM
+          estado:
+          avance:
+
+        - wb: Publicación de Centro de costos IDIEM
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Reportes
+          estado:
+          avance:
+
+        - wb: Reportes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Asistencia RRHH
-      wb:
-        - nombre: Solicitud de horas extra RRHH
+          estado:
+          avance:
+
+    - hito: Asistencia RRHH
+      tareas:
+        - wb: Solicitud de horas extra RRHH
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Modificaciones API Justificaciones (UCampus)
+          estado:
+          avance:
+
+        - wb: Modificaciones API Justificaciones (UCampus)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Modificaciones API Omisiones (UCampus)
+          estado:
+          avance:
+
+        - wb: Modificaciones API Omisiones (UCampus)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Migración reloj control (ADI)
+          estado:
+          avance:
+
+        - wb: Migración reloj control (ADI)
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Módulos misceláneos
-      wb:
-        - nombre: Emisión de cheques UCO
+          estado:
+          avance:
+
+    - hito: Módulos misceláneos
+      tareas:
+        - wb: Emisión de cheques UCO
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Generador números únicos de oficios
+          estado:
+          avance:
+
+        - wb: Generador números únicos de oficios
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Módulo SST / Licencias de conducir
+          estado:
+          avance:
+
+        - wb: Módulo SST / Licencias de conducir
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Mejoras técnicas idiem.cl
-      wb:
-        - nombre: Landing page Geomensura
+          estado:
+          avance:
+
+    - hito: Mejoras técnicas idiem.cl
+      tareas:
+        - wb: Landing page Geomensura
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: URL dinámicas
+          estado:
+          avance:
+
+        - wb: URL dinámicas
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Landing page Autogestionado
+          estado:
+          avance:
+
+        - wb: Landing page Autogestionado
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Despliegue productivo Sensores
-      wb:
-        - nombre: Backend nube
+          estado:
+          avance:
+
+    - hito: Despliegue productivo Sensores
+      tareas:
+        - wb: Backend nube
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Migración data histórica
+          estado:
+          avance:
+
+        - wb: Migración data histórica
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Piloto (desarrollos)
-      wb:
-        - nombre: Módulo Servicios informes (filtros)
+          estado:
+          avance:
+
+    - hito: Piloto (desarrollos)
+      tareas:
+        - wb: Módulo Servicios informes (filtros)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Piloto (dependencias)
-      wb:
-        - nombre: Corrección de informes con mal clasificados
+          estado:
+          avance:
+
+    - hito: Piloto (dependencias)
+      tareas:
+        - wb: Corrección de informes con mal clasificados
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Bloqueo Intranet Azul para evitar informes mal clasificados
+          estado:
+          avance:
+
+        - wb: Bloqueo Intranet Azul para evitar informes mal clasificados
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos)
+          estado:
+          avance:
+
+        - wb: Sincronización servicios ejecutados módulo resultados (muestreo y ensayos)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Dashboard (genérico) Release Piloto
+          estado:
+          avance:
+
+        - wb: Dashboard (genérico) Release Piloto
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Actualización campos fecha de ensayo (inicio
-          termino)
+          estado:
+          avance:
+
+        - wb: Actualización campos fecha de ensayo (inicio termino)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Release Áridos/ Químicos
-      wb:
-        - nombre: Módulo Resultados (aridos
-          químicos): Muestreo y Ensayos
+          estado:
+          avance:
+
+    - hito: Release Áridos/ Químicos
+      tareas:
+        - wb: Módulo Resultados (aridos químicos): Muestreo y Ensayos
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Piloto (UX/UI Agencia)
-      wb:
-        - nombre: Ajustes UX/ UI
+          estado:
+          avance:
+
+    - hito: Piloto (UX/UI Agencia)
+      tareas:
+        - wb: Ajustes UX/ UI
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Release Hormigones
-      wb:
-        - nombre: Migración data (muestreo y samplings > capa 2)
+          estado:
+          avance:
+
+    - hito: Release Hormigones
+      tareas:
+        - wb: Migración data (muestreo y samplings > capa 2)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Módulo Resultados hormigones (Muestreo y Ensayos)
+          estado:
+          avance:
+
+        - wb: Módulo Resultados hormigones (Muestreo y Ensayos)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Libro de obras
+          estado:
+          avance:
+
+        - wb: Libro de obras
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Módulo de Administración FTP / Integración
+          estado:
+          avance:
+
+        - wb: Módulo de Administración FTP / Integración
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Análisis y tendencias (UX/UI)
+          estado:
+          avance:
+
+        - wb: Análisis y tendencias (UX/UI)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Email de alertas clientes
+          estado:
+          avance:
+
+        - wb: Email de alertas clientes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Análisis y tendencias (migración data y calculos)
+          estado:
+          avance:
+
+        - wb: Análisis y tendencias (migración data y calculos)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Migración alertas operacionales internas Hormigones
+          estado:
+          avance:
+
+        - wb: Migración alertas operacionales internas Hormigones
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Release Sensores
-      wb:
-        - nombre: Módulos de administración de proyectos
+          estado:
+          avance:
+
+    - hito: Release Sensores
+      tareas:
+        - wb: Módulos de administración de proyectos
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Gráficos inclinómetros
+          estado:
+          avance:
+
+        - wb: Gráficos inclinómetros
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Gráficos acelerómetros
+          estado:
+          avance:
+
+        - wb: Gráficos acelerómetros
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Gráficos Strain Gages
+          estado:
+          avance:
+
+        - wb: Gráficos Strain Gages
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Modificación gestión de permisos de usuario
+          estado:
+          avance:
+
+        - wb: Modificación gestión de permisos de usuario
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Alertas internas por intermitencia
+          estado:
+          avance:
+
+        - wb: Alertas internas por intermitencia
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Mejora continua (nuevas alertas y nuevas funcionalidades)
+          estado:
+          avance:
+
+        - wb: Mejora continua (nuevas alertas y nuevas funcionalidades)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Dashboard de inicio
+          estado:
+          avance:
+
+        - wb: Dashboard de inicio
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Release Aceros
-      wb:
-        - nombre: Servicios Aceros Muestreo y ensayos para informes DAC
+          estado:
+          avance:
+
+    - hito: Release Aceros
+      tareas:
+        - wb: Servicios Aceros Muestreo y ensayos para informes DAC
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Release Suelos
-      wb:
-        - nombre: Servicios cd Muestreo y ensayos e informes DGL (suelos)
+          estado:
+          avance:
+
+    - hito: Release Suelos
+      tareas:
+        - wb: Servicios cd Muestreo y ensayos e informes DGL (suelos)
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Mejoras evolutivas plataforma
-      wb:
-        - nombre: Dashboard DHI (cementos
-          áridos
-          químicos)
+          estado:
+          avance:
+
+    - hito: Mejoras evolutivas plataforma
+      tareas:
+        - wb: Dashboard DHI (cementos áridos químicos)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Dashboard Hormigones
+          estado:
+          avance:
+
+        - wb: Dashboard Hormigones
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Dashboard DAC
+          estado:
+          avance:
+
+        - wb: Dashboard DAC
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Dashboard DGL (suelos)
+          estado:
+          avance:
+
+        - wb: Dashboard DGL (suelos)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Integraciones con clientes
-      wb:
-        - nombre: API Fenix AZA
-          release LIMS
+          estado:
+          avance:
+
+    - hito: Integraciones con clientes
+      tareas:
+        - wb: API Fenix AZA release LIMS
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: ARES release LIMS
+          estado:
+          avance:
+
+        - wb: ARES release LIMS
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Blueprint Firmador
-      wb:
-        - nombre: Modelo de datos y arquitectura
+          estado:
+          avance:
+
+    - hito: Blueprint Firmador
+      tareas:
+        - wb: Modelo de datos y arquitectura
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Plan detallado
+          estado:
+          avance:
+
+        - wb: Plan detallado
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: UX/ UI Firmador
+          estado:
+          avance:
+
+        - wb: UX/ UI Firmador
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Integraciones Firmador
-      wb:
-        - nombre: Integración FEA Core (IDIEM Signature)
+          estado:
+          avance:
+
+    - hito: Integraciones Firmador
+      tareas:
+        - wb: Integración FEA Core (IDIEM Signature)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Plataforma Capa 2
+          estado:
+          avance:
+
+        - wb: Plataforma Capa 2
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Mensajería éxito/ fallo
+          estado:
+          avance:
+
+        - wb: Mensajería éxito/ fallo
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración API Documents (end point)
+          estado:
+          avance:
+
+        - wb: Integración API Documents (end point)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración API Core (sampling)
+          estado:
+          avance:
+
+        - wb: Integración API Core (sampling)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración LIMS
+          estado:
+          avance:
+
+        - wb: Integración LIMS
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Tareas programadas de cierre transacciones
+          estado:
+          avance:
+
+        - wb: Tareas programadas de cierre transacciones
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: idiem AUTH
+          estado:
+          avance:
+
+        - wb: idiem AUTH
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Interfaz de usuario Firmador
-      wb:
-        - nombre: Bandeja de validación
+          estado:
+          avance:
+
+    - hito: Interfaz de usuario Firmador
+      tareas:
+        - wb: Bandeja de validación
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Bandeja de firma
+          estado:
+          avance:
+
+        - wb: Bandeja de firma
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Visualización de documentos individual
+          estado:
+          avance:
+
+        - wb: Visualización de documentos individual
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Visualización de documentos masiva
+          estado:
+          avance:
+
+        - wb: Visualización de documentos masiva
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Descarga de documentos
+          estado:
+          avance:
+
+        - wb: Descarga de documentos
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Filtros de búsqueda / paginación
+          estado:
+          avance:
+
+        - wb: Filtros de búsqueda / paginación
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Flujo unitario Firmador
-      wb:
-        - nombre: Carga manual de documentos
+          estado:
+          avance:
+
+    - hito: Flujo unitario Firmador
+      tareas:
+        - wb: Carga manual de documentos
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Firma unitario
+          estado:
+          avance:
+
+        - wb: Firma unitario
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Rechazo unitario
+          estado:
+          avance:
+
+        - wb: Rechazo unitario
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Anulación unitaria
+          estado:
+          avance:
+
+        - wb: Anulación unitaria
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Validación unitaria
+          estado:
+          avance:
+
+        - wb: Validación unitaria
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Flujo masivo Firmador
-      wb:
-        - nombre: Firma masiva
+          estado:
+          avance:
+
+    - hito: Flujo masivo Firmador
+      tareas:
+        - wb: Firma masiva
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Rechazo masivo
+          estado:
+          avance:
+
+        - wb: Rechazo masivo
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Anular masivo
+          estado:
+          avance:
+
+        - wb: Anular masivo
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Validación masiva
+          estado:
+          avance:
+
+        - wb: Validación masiva
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Funciones adicionales Firmador
-      wb:
-        - nombre: Anular masivo modo admin
+          estado:
+          avance:
+
+    - hito: Funciones adicionales Firmador
+      tareas:
+        - wb: Anular masivo modo admin
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Indicadores
+          estado:
+          avance:
+
+        - wb: Indicadores
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Reportes
+          estado:
+          avance:
+
+        - wb: Reportes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Gestión de metadatos
+          estado:
+          avance:
+
+        - wb: Gestión de metadatos
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración vía WS Ares - cartas de anulación
+          estado:
+          avance:
+
+        - wb: Integración vía WS Ares - cartas de anulación
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Integración con clientes (REVISAR)
+          estado:
+          avance:
+
+        - wb: Integración con clientes (REVISAR)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Tareas background Intranet Azul
-      wb:
-        - nombre: Tareas programadas background (crones)
+          estado:
+          avance:
+
+    - hito: Tareas background Intranet Azul
+      tareas:
+        - wb: Tareas programadas background (crones)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Servicios a clientes Intranet Azul
-      wb:
-        - nombre: API entre idiem y clientes
+          estado:
+          avance:
+
+    - hito: Servicios a clientes Intranet Azul
+      tareas:
+        - wb: API entre idiem y clientes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Plataforma AZA
+          estado:
+          avance:
+
+        - wb: Plataforma AZA
           tamaño: indef
-          dias
-          puntos
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Rúbrica Firmador
-      wb:
-        - nombre: Posición rúbrica
+          estado:
+          avance:
+
+    - hito: Rúbrica Firmador
+      tareas:
+        - wb: Posición rúbrica
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Prueba de concepto muestreo
-      wb:
-        - nombre: Mejoras formulario dinámico web/app
+          estado:
+          avance:
+
+    - hito: Prueba de concepto muestreo
+      tareas:
+        - wb: Mejoras formulario dinámico web/app
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Implementación tipo de servicio hormigones
+          estado:
+          avance:
+
+        - wb: Implementación tipo de servicio hormigones
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Nuevas funcionalidades formularios dinámico web/app
+          estado:
+          avance:
+
+        - wb: Nuevas funcionalidades formularios dinámico web/app
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Implementar en app soporte caché offline de listados de datos
+          estado:
+          avance:
+
+        - wb: Implementar en app soporte caché offline de listados de datos
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Operación base muestreo
-      wb:
-        - nombre: Creación monitor de frecuencias
+          estado:
+          avance:
+
+    - hito: Operación base muestreo
+      tareas:
+        - wb: Creación monitor de frecuencias
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Ajustes/recrear al mantenedor de plantas
+          estado:
+          avance:
+
+        - wb: Ajustes/recrear al mantenedor de plantas
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Integración de guías de despacho
+          estado:
+          avance:
+
+        - wb: Integración de guías de despacho
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Incorporación del estado "Pérdida por Laboratorio”
+          estado:
+          avance:
+
+        - wb: Incorporación del estado "Pérdida por Laboratorio”
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Actualización de ID obras de hormigones por convivencia con sol
+          estado:
+          avance:
+
+        - wb: Actualización de ID obras de hormigones por convivencia con sol
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Ciclo completo muestreo (retiros)
-      wb:
-        - nombre: Implementar nuevo proceso de retiro
+          estado:
+          avance:
+
+    - hito: Ciclo completo muestreo (retiros)
+      tareas:
+        - wb: Implementar nuevo proceso de retiro
           tamaño: XL
-          dias: 80
-          puntos: 55
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Migración APP retiro
+          estado:
+          avance:
+
+        - wb: Migración APP retiro
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Integraciones muestreo
-      wb:
-        - nombre: Ajustar/recrear integración ondemand de clientes
+          estado:
+          avance:
+
+    - hito: Integraciones muestreo
+      tareas:
+        - wb: Ajustar/recrear integración ondemand de clientes
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Ajustar/recrear integración FTP a clientes
+          estado:
+          avance:
+
+        - wb: Ajustar/recrear integración FTP a clientes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Evaluación/implementación mantención muestras antiguas
+          estado:
+          avance:
+
+        - wb: Evaluación/implementación mantención muestras antiguas
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Configuración de integración de hormigones a LIMS
+          estado:
+          avance:
+
+        - wb: Configuración de integración de hormigones a LIMS
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Mejora evolutiva muestreo
-      wb:
-        - nombre: Migración de información base de mantenedores
+          estado:
+          avance:
+
+    - hito: Mejora evolutiva muestreo
+      tareas:
+        - wb: Migración de información base de mantenedores
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Generación número de control de obra
+          estado:
+          avance:
+
+        - wb: Generación número de control de obra
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Carga masiva de programación
+          estado:
+          avance:
+
+        - wb: Carga masiva de programación
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: APIs entre aplicaciones idiem
-      wb:
-        - nombre: Migración API Facturación (ADI/ Boleta exenta)
+          estado:
+          avance:
+
+    - hito: APIs entre aplicaciones idiem
+      tareas:
+        - wb: Migración API Facturación (ADI/ Boleta exenta)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración Salesforce/ Timesheet
+          estado:
+          avance:
+
+        - wb: Integración Salesforce/ Timesheet
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Integraciones Odoo
-      wb:
-        - nombre: API Salesforce Odoo (T:506566)
+          estado:
+          avance:
+
+    - hito: Integraciones Odoo
+      tareas:
+        - wb: API Salesforce Odoo (T:506566)
           tamaño: indef
-          dias
-          puntos
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración Odoo/ Emisión OC (sólo creación)
+          estado:
+          avance:
+
+        - wb: Integración Odoo/ Emisión OC (sólo creación)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración Odoo / Ciclo de vida OC (completo)
+          estado:
+          avance:
+
+        - wb: Integración Odoo / Ciclo de vida OC (completo)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Intregración Odoo/ CC idiem
+          estado:
+          avance:
+
+        - wb: Intregración Odoo/ CC idiem
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Sincronización de cuentas contables Odoo
+          estado:
+          avance:
+
+        - wb: Sincronización de cuentas contables Odoo
           tamaño: indef
-          dias
-          puntos
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Integración Odoo / SOL (T:780447)
+          estado:
+          avance:
+
+        - wb: Integración Odoo / SOL (T:780447)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Upgrade frameworks
-      wb:
-        - nombre: Upgrade Boleta Digital
+          estado:
+          avance:
+
+    - hito: Upgrade frameworks
+      tareas:
+        - wb: Upgrade Boleta Digital
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Upgrade API Core (v20- LTS)
+          estado:
+          avance:
+
+        - wb: Upgrade API Core (v20- LTS)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade SOL
+          estado:
+          avance:
+
+        - wb: Upgrade SOL
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade SOL App
+          estado:
+          avance:
+
+        - wb: Upgrade SOL App
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade SOL API / SOL CORE
+          estado:
+          avance:
+
+        - wb: Upgrade SOL API / SOL CORE
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade IntraDTI
+          estado:
+          avance:
+
+        - wb: Upgrade IntraDTI
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade Mi Idiem
+          estado:
+          avance:
+
+        - wb: Upgrade Mi Idiem
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade idiem.cl
+          estado:
+          avance:
+
+        - wb: Upgrade idiem.cl
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Tickets e issues correctivos
-      wb:
-        - nombre: Tickets e issues Boleta Digital
+          estado:
+          avance:
+
+    - hito: Tickets e issues correctivos
+      tareas:
+        - wb: Tickets e issues Boleta Digital
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Tickets e issues Intranet Azul
+          estado:
+          avance:
+
+        - wb: Tickets e issues Intranet Azul
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Tickets e issues IntranetDTI
+          estado:
+          avance:
+
+        - wb: Tickets e issues IntranetDTI
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Tickets e issues SOL
+          estado:
+          avance:
+
+        - wb: Tickets e issues SOL
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Tickets e issues Plataforma de clientes
+          estado:
+          avance:
+
+        - wb: Tickets e issues Plataforma de clientes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Mejoras técnicas IntraDTI
-      wb:
-        - nombre: Mejoras flujo de contrataciones
+          estado:
+          avance:
+
+    - hito: Mejoras técnicas IntraDTI
+      tareas:
+        - wb: Mejoras flujo de contrataciones
           tamaño: XL
-          dias: 80
-          puntos: 55
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Módulo de Facturación (control de cambios)
+          estado:
+          avance:
+
+        - wb: Módulo de Facturación (control de cambios)
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Emisión centralizada estados de pago
+          estado:
+          avance:
+
+        - wb: Emisión centralizada estados de pago
           tamaño: XXL
-          dias: 100
-          puntos: 124
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Flujo de retención de boletas de garantía
+          estado:
+          avance:
+
+        - wb: Flujo de retención de boletas de garantía
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Mejoras técnicas SOL
-      wb:
-        - nombre: Reemplazo "obra" por "oportunidad"
+          estado:
+          avance:
+
+    - hito: Mejoras técnicas SOL
+      tareas:
+        - wb: Reemplazo "obra" por "oportunidad"
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Logs de registro de transacciones SOL
+          estado:
+          avance:
+
+        - wb: Logs de registro de transacciones SOL
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Solución SOL APP borrado de BD
+          estado:
+          avance:
+
+        - wb: Solución SOL APP borrado de BD
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-    - nombre: Mejoras evolutivas hormigón
-      wb:
-        - nombre: Correcciones planilla de descarga retiros
+          estado:
+          avance:
+
+    - hito: Mejoras evolutivas hormigón
+      tareas:
+        - wb: Correcciones planilla de descarga retiros
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Módulo de facturación en zonales (samplings)
+          estado:
+          avance:
+
+        - wb: Módulo de facturación en zonales (samplings)
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
-    - nombre: Sensores de temperatura
-      wb:
-        - nombre: Dashboard interno
+          estado:
+          avance:
+
+    - hito: Sensores de temperatura
+      tareas:
+        - wb: Dashboard interno
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Dashboard clientes
+          estado:
+          avance:
+
+        - wb: Dashboard clientes
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
-          
+          estado:
+          avance:
+

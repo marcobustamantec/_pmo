@@ -1,114 +1,132 @@
 proyecto:
   nombre: Migración Administrativa Intranet Azul
-  milestone:
-    - nombre: Flujo de rendiciones UCO
-      wb:
-        - nombre: Flujo de rendición de boletas
+  entregas:
+    - hito: Flujo de rendiciones UCO
+      tareas:
+        - wb: Flujo de rendición de boletas
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-        - nombre: Flujo de rendición de facturas
+        - wb: Flujo de rendición de facturas
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-        - nombre: Integración rendiciones (informat)
+        - wb: Integración rendiciones (informat)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-    - nombre: Flujo de solicitudes UCO
-      wb:
-        - nombre: Flujo de solicitud de provisorios
+    - hito: Flujo de solicitudes UCO
+      tareas:
+        - wb: Flujo de solicitud de provisorios
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-        - nombre: Flujo de solicitud de caja chica
+        - wb: Flujo de solicitud de caja chica
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-    - nombre: Migración Control de Gestión
-      wb:
-        - nombre: Presupuesto e imprevistos
+    - hito: Migración Control de Gestión
+      tareas:
+        - wb: Presupuesto e imprevistos
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-        - nombre: Provisiones y reversas
+        - wb: Provisiones y reversas
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-        - nombre: Traspasos internos
+        - wb: Traspasos internos
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
 
-        - nombre: Publicación de Centro de costos IDIEM
+        - wb: Publicación de Centro de costos IDIEM
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Reportes
+        - wb: Reportes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Asistencia RRHH
-      wb:
-        - nombre: Solicitud de horas extra RRHH
+    - hito: Asistencia RRHH
+      tareas:
+        - wb: Solicitud de horas extra RRHH
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Modificaciones API Justificaciones (UCampus)
+        - wb: Modificaciones API Justificaciones (UCampus)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Modificaciones API Omisiones (UCampus)
+        - wb: Modificaciones API Omisiones (UCampus)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Migración reloj control (ADI)
+        - wb: Migración reloj control (ADI)
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-    - nombre: Módulos misceláneos
-      wb:
-        - nombre: Emisión de cheques UCO
+    - hito: Módulos misceláneos
+      tareas:
+        - wb: Emisión de cheques UCO
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Generador números únicos de oficios
+        - wb: Generador números únicos de oficios
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Módulo SST / Licencias de conducir
+        - wb: Módulo SST / Licencias de conducir
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
+

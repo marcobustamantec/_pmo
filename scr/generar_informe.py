@@ -56,6 +56,13 @@ ESTADO_DEC = {
 }
 FILAS_POR_SLIDE = 7
 
+# Tamaño de tarea (talla) -> puntos. Ajustar a la convención del equipo.
+# Una tarea puede traer "puntos" explícitos y eso prevalece sobre la talla.
+PUNTOS_TAMANO = {"XS": 1, "S": 2, "M": 3, "L": 5, "XL": 8}
+
+# Opcional: rol por iniciales para la slide de capacidad. Ej: {"DG": "Senior", "OS": "Dev"}
+ROLES = {}
+
 FRONT_MATTER_DEFECTO = """---
 marp: true
 theme: elige-idiem
@@ -145,26 +152,62 @@ def slides_tabla(titulo, subtitulo, headers, filas, alinear=None,
 # ----------------------------------------------------------------------------
 # Cálculos sobre milestones
 # ----------------------------------------------------------------------------
+def fmt_pts(v) -> str:
+    """Puntos sin decimales si son enteros (3.0 -> 3, 2.5 -> 2.5)."""
+    return f"{v:.1f}".rstrip("0").rstrip(".") if v else "0"
+
+
+def normalizar_tarea(t):
+    """Convierte una tarea del YAML nuevo a la forma que usa el informe."""
+    tam = str(t.get("tamaño", "")).strip().upper()
+    puntos = t.get("puntos")
+    if puntos is None:
+        if tam not in PUNTOS_TAMANO:
+            print(
+                f"⚠ Tamaño desconocido '{tam}' en tarea '{t.get('wb')}' (se cuenta 0 pts)")
+        puntos = PUNTOS_TAMANO.get(tam, 0)
+    estado = t.get("estado")
+    avance = num(t.get("avance"))
+    if estado == "finalizado":
+        avance = 1.0
+    avance = min(max(avance or 0.0, 0.0), 1.0)
+    asignado = t.get("asignado") or []
+    if isinstance(asignado, str):
+        asignado = [asignado]
+    return {
+        "nombre": t.get("wb", "—"),
+        "detalle": t.get("detalle"),
+        "tamano": tam,
+        "puntos": puntos,
+        "asignado": list(asignado),
+        "incertidumbre": t.get("incertidumbre"),
+        "estado": estado,
+        "avance": avance,
+        "inicio": t.get("inicio"),
+        "fin": t.get("fin"),
+    }
+
+
 def analizar_milestones(ms_yaml):
     proyecto = ms_yaml.get("proyecto", {})
     hitos = []
-    for m in proyecto.get("milestone", []) or []:
-        wbs = m.get("wb", []) or []
-        pts_tot = sum(w.get("puntos", 0) or 0 for w in wbs)
-        pts_ok = sum(w.get("puntos", 0) or 0 for w in wbs if w.get(
-            "estado") == "finalizado")
-        n_ok = sum(1 for w in wbs if w.get("estado") == "finalizado")
-        estados = {w.get("estado") for w in wbs}
+    for m in proyecto.get("entregas", []) or []:
+        wbs = [normalizar_tarea(t) for t in (m.get("tareas") or [])]
+        pts_tot = sum(w["puntos"] for w in wbs)
+        # puntos ganados: puntos * avance (una tarea al 50% aporta la mitad)
+        pts_ok = sum(w["puntos"] * w["avance"] for w in wbs)
+        n_ok = sum(1 for w in wbs if w["estado"] == "finalizado")
+        estados = {w["estado"] for w in wbs}
         if wbs and n_ok == len(wbs):
             estado = "Completado"
-        elif "wip" in estados or n_ok > 0:
+        elif "wip" in estados or n_ok > 0 or any(w["avance"] > 0 for w in wbs):
             estado = "En curso"
         elif estados == {"pausado"}:
             estado = "Pausado"
         else:
             estado = "Pendiente"
         hitos.append({
-            "nombre": m.get("nombre", "—"),
+            "nombre": m.get("hito", "—"),
             "descripcion": m.get("descripcion"),
             "wbs": wbs,
             "pts_tot": pts_tot,
@@ -178,25 +221,18 @@ def analizar_milestones(ms_yaml):
 
 
 def capacidad(hitos):
-    """Puntos por persona (juniors y seniors) a partir de los WB."""
+    """Puntos por persona (iniciales en 'asignado') a partir de las tareas."""
     personas = {}
-
-    def reg(nombre, rol, w):
-        k = (nombre, rol)
-        d = personas.setdefault(k, {"asig": 0, "ok": 0, "tareas_abiertas": 0})
-        p = w.get("puntos", 0) or 0
-        d["asig"] += p
-        if w.get("estado") == "finalizado":
-            d["ok"] += p
-        else:
-            d["tareas_abiertas"] += 1
-
     for h in hitos:
         for w in h["wbs"]:
-            for j in w.get("junior") or []:
-                reg(j, "Desarrollador (jr)", w)
-            if w.get("senior"):
-                reg(w["senior"], "Senior", w)
+            for nombre in w["asignado"]:
+                k = (nombre, ROLES.get(nombre, ""))
+                d = personas.setdefault(
+                    k, {"asig": 0, "ok": 0, "tareas_abiertas": 0})
+                d["asig"] += w["puntos"]
+                d["ok"] += w["puntos"] * w["avance"]
+                if w["estado"] != "finalizado":
+                    d["tareas_abiertas"] += 1
     return personas
 
 
@@ -230,7 +266,7 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=False):
     pts_tot = sum(h["pts_tot"] for h in hitos)
     pts_ok = sum(h["pts_ok"] for h in hitos)
     n_tot, n_ok = len(todos_wb), sum(
-        1 for w in todos_wb if w.get("estado") == "finalizado")
+        1 for w in todos_wb if w["estado"] == "finalizado")
     hitos_ok = sum(1 for h in hitos if h["completo"])
 
     # Riesgos / problemas
@@ -288,7 +324,7 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=False):
         ["Estado general", estado_general],
         ["Fase actual", d2.get("fase")],
         ["Avance real",
-            f"{pts_ok} : {pts_tot} puntos — **{real:.0f}%** (planificado: {plan_txt})"],
+            f"{fmt_pts(pts_ok)} : {fmt_pts(pts_tot)} puntos — **{real:.0f}%** (planificado: {plan_txt})"],
         ["Célula", celula],
         ["Cierre de tareas", f"{n_ok} de {n_tot}"],
         ["Cumplimiento de hitos", f"{hitos_ok} de {len(hitos)}"],
@@ -330,10 +366,10 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=False):
     S.append(s)
 
     # --- 3. Fases / hitos -----------------------------------------------
-    filas = [[h["nombre"], h["descripcion"], h["pts_ok"], h["pts_tot"],
+    filas = [[h["nombre"], h["descripcion"], fmt_pts(h["pts_ok"]), fmt_pts(h["pts_tot"]),
               f"{pct(h['pts_ok'], h['pts_tot']):.0f}%"] for h in hitos]
-    filas.append([f"**Total**", "", f"**{pts_ok}**",
-                 f"**{pts_tot}**", f"**{pct(pts_ok, pts_tot):.0f}%**"])
+    filas.append([f"**Total**", "", f"**{fmt_pts(pts_ok)}**",
+                 f"**{fmt_pts(pts_tot)}**", f"**{pct(pts_ok, pts_tot):.0f}%**"])
     S += slides_tabla(
         "Fases del proyecto", "Avance por hitos",
         ["Componente / Entregable", "Descripción",
@@ -383,15 +419,15 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=False):
     pers = capacidad(hitos)
     pend_total = sum(v["asig"] - v["ok"] for v in pers.values()) or 1
     filas = []
-    ordenadas = sorted(pers.items(), key=lambda kv: (
-        kv[0][1] != "Senior", -(kv[1]["asig"] - kv[1]["ok"])))
+    ordenadas = sorted(pers.items(), key=lambda kv: -
+                       (kv[1]["asig"] - kv[1]["ok"]))
     for (nombre, rol), v in ordenadas:
         pend = v["asig"] - v["ok"]
         share = pct(pend, pend_total)
         obs = f"Concentra {share:.0f}% de los puntos pendientes" if share >= 35 else (
             "Sin carga pendiente" if pend == 0 else "")
-        filas.append([f"{nombre} ({rol})", v["asig"], v["ok"],
-                     pend, v["tareas_abiertas"], obs])
+        filas.append([f"{nombre} ({rol})" if rol else nombre, fmt_pts(v["asig"]),
+                      fmt_pts(v["ok"]), fmt_pts(pend), v["tareas_abiertas"], obs])
     extra = ""
     if d2.get("alertas_capacidad"):
         extra += "".join(f"- ⚠ {txt(a)}\n" for a in d2["alertas_capacidad"])
@@ -434,14 +470,13 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=False):
     for h in hitos:
         if h["completo"]:
             continue
-        abiertos = [w for w in h["wbs"] if w.get("estado") != "finalizado"]
-        resp = sorted({w["senior"] for w in abiertos if w.get("senior")} |
-                      {j for w in abiertos for j in (w.get("junior") or [])})
+        abiertos = [w for w in h["wbs"] if w["estado"] != "finalizado"]
+        resp = sorted({p for w in abiertos for p in w["asignado"]})
         pend = h["pts_tot"] - h["pts_ok"]
         # inicio / fin: opcionales en el YAML (campos 'inicio' y 'fin' del WB)
-        ini = [w["inicio"] for w in abiertos if w.get("inicio")]
-        fin = [w["fin"] for w in abiertos if w.get("fin")]
-        filas.append([f"{h['nombre']} ({pend} pts)", ", ".join(resp),
+        ini = [w["inicio"] for w in abiertos if w["inicio"]]
+        fin = [w["fin"] for w in abiertos if w["fin"]]
+        filas.append([f"{h['nombre']} ({fmt_pts(pend)} pts)", ", ".join(resp),
                       fecha(min(ini)) if ini else "Por definir",
                       fecha(max(fin)) if fin else "Por definir",
                       PRIORIDAD.get(h["estado"], "Media"), h["estado"]])

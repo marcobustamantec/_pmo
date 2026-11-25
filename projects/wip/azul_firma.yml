@@ -1,236 +1,273 @@
 proyecto:
   nombre: Firmador Azul
-  milestone:
-    - nombre: Blueprint Firmador
-      wb:
-        - nombre: Modelo de datos y arquitectura
+  entregas:
+    - hito: Blueprint Firmador
+      tareas:
+        - wb: Modelo de datos y arquitectura
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Plan detallado
+        - wb: Plan detallado
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: UX/ UI Firmador
+        - wb: UX/ UI Firmador
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Integraciones Firmador
-      wb:
-        - nombre: Integración FEA Core (IDIEM Signature)
+    - hito: Integraciones Firmador
+      tareas:
+        - wb: Integración FEA Core (IDIEM Signature)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Plataforma Capa 2
+        - wb: Plataforma Capa 2
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Mensajería éxito/ fallo
+        - wb: Mensajería éxito/ fallo
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Integración API Documents (end point)
+        - wb: Integración API Documents (end point)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Integración API Core (sampling)
+        - wb: Integración API Core (sampling)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Integración LIMS
+        - wb: Integración LIMS
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Tareas programadas de cierre transacciones
+        - wb: Tareas programadas de cierre transacciones
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: idiem AUTH
+        - wb: idiem AUTH
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Interfaz de usuario Firmador
-      wb:
-        - nombre: Bandeja de validación
+    - hito: Interfaz de usuario Firmador
+      tareas:
+        - wb: Bandeja de validación
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Bandeja de firma
+        - wb: Bandeja de firma
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Visualización de documentos individual
+        - wb: Visualización de documentos individual
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Visualización de documentos masiva
+        - wb: Visualización de documentos masiva
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Descarga de documentos
+        - wb: Descarga de documentos
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Filtros de búsqueda / paginación
+        - wb: Filtros de búsqueda / paginación
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-    - nombre: Flujo unitario Firmador
-      wb:
-        - nombre: Carga manual de documentos
+    - hito: Flujo unitario Firmador
+      tareas:
+        - wb: Carga manual de documentos
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Firma unitario
+        - wb: Firma unitario
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Rechazo unitario
+        - wb: Rechazo unitario
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Anulación unitaria
+        - wb: Anulación unitaria
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Validación unitaria
+        - wb: Validación unitaria
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Flujo masivo Firmador
-      wb:
-        - nombre: Firma masiva
+    - hito: Flujo masivo Firmador
+      tareas:
+        - wb: Firma masiva
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Rechazo masivo
+        - wb: Rechazo masivo
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Anular masivo
+        - wb: Anular masivo
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Validación masiva
+        - wb: Validación masiva
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Funciones adicionales Firmador
-      wb:
-        - nombre: Anular masivo modo admin
+    - hito: Funciones adicionales Firmador
+      tareas:
+        - wb: Anular masivo modo admin
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Indicadores
+        - wb: Indicadores
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Reportes
+        - wb: Reportes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Gestión de metadatos
+        - wb: Gestión de metadatos
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-        - nombre: Integración vía WS Ares - cartas de anulación
+        - wb: Integración vía WS Ares - cartas de anulación
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Integración con clientes (REVISAR)
+        - wb: Integración con clientes (REVISAR)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Tareas background Intranet Azul
-      wb:
-        - nombre: Tareas programadas background (crones)
+    - hito: Tareas background Intranet Azul
+      tareas:
+        - wb: Tareas programadas background (crones)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
+          estado:
+          avance:
 
-    - nombre: Servicios a clientes Intranet Azul
-      wb:
-        - nombre: API entre idiem y clientes
+    - hito: Servicios a clientes Intranet Azul
+      tareas:
+        - wb: API entre idiem y clientes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-        - nombre: Plataforma AZA
+        - wb: Plataforma AZA
           tamaño: indef
-          dias:
-          puntos:
+          asignado: []
           incertidumbre: media
+          estado:
+          avance:
 
-    - nombre: Rúbrica Firmador
-      wb:
-        - nombre: Posición rúbrica
+    - hito: Rúbrica Firmador
+      tareas:
+        - wb: Posición rúbrica
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
+          estado:
+          avance:
+

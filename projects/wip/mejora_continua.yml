@@ -1,196 +1,224 @@
 proyecto:
   nombre: Mejora Continua
-  milestone:
-    - nombre: Idiem Auth
-      wb:
-        - nombre: Autenticación IntraDTI
+  entregas:
+    - hito: Idiem Auth
+      tareas:
+        - wb: Autenticación IntraDTI
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Despliegue productivo Sensores
-      wb:
-        - nombre: Backend nube
+          estado:
+          avance:
+
+    - hito: Despliegue productivo Sensores
+      tareas:
+        - wb: Backend nube
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Migración data histórica
+          estado:
+          avance:
+
+        - wb: Migración data histórica
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Integraciones con clientes
-      wb:
-        - nombre: API Fenix AZA
-          release LIMS
+          estado:
+          avance:
+
+    - hito: Integraciones con clientes
+      tareas:
+        - wb: API Fenix AZA release LIMS
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: ARES release LIMS
+          estado:
+          avance:
+
+        - wb: ARES release LIMS
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: APIs entre aplicaciones idiem
-      wb:
-        - nombre: Migración API Facturación (ADI/ Boleta exenta)
+          estado:
+          avance:
+
+    - hito: APIs entre aplicaciones idiem
+      tareas:
+        - wb: Migración API Facturación (ADI/ Boleta exenta)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración Salesforce/ Timesheet
+          estado:
+          avance:
+
+        - wb: Integración Salesforce/ Timesheet
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Integraciones Odoo
-      wb:
-        - nombre: API Salesforce Odoo (T:506566)
+          estado:
+          avance:
+
+    - hito: Integraciones Odoo
+      tareas:
+        - wb: API Salesforce Odoo (T:506566)
           tamaño: indef
-          dias
-          puntos
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración Odoo/ Emisión OC (sólo creación)
+          estado:
+          avance:
+
+        - wb: Integración Odoo/ Emisión OC (sólo creación)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Integración Odoo / Ciclo de vida OC (completo)
+          estado:
+          avance:
+
+        - wb: Integración Odoo / Ciclo de vida OC (completo)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Intregración Odoo/ CC idiem
+          estado:
+          avance:
+
+        - wb: Intregración Odoo/ CC idiem
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Sincronización de cuentas contables Odoo
+          estado:
+          avance:
+
+        - wb: Sincronización de cuentas contables Odoo
           tamaño: indef
-          dias
-          puntos
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Integración Odoo / SOL (T:780447)
+          estado:
+          avance:
+
+        - wb: Integración Odoo / SOL (T:780447)
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Upgrade frameworks
-      wb:
-        - nombre: Upgrade Boleta Digital
+          estado:
+          avance:
+
+    - hito: Upgrade frameworks
+      tareas:
+        - wb: Upgrade Boleta Digital
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Upgrade API Core (v20- LTS)
+          estado:
+          avance:
+
+        - wb: Upgrade API Core (v20- LTS)
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade SOL
+          estado:
+          avance:
+
+        - wb: Upgrade SOL
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade SOL App
+          estado:
+          avance:
+
+        - wb: Upgrade SOL App
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade SOL API / SOL CORE
+          estado:
+          avance:
+
+        - wb: Upgrade SOL API / SOL CORE
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade IntraDTI
+          estado:
+          avance:
+
+        - wb: Upgrade IntraDTI
           tamaño: L
-          dias: 35
-          puntos: 21
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade Mi Idiem
+          estado:
+          avance:
+
+        - wb: Upgrade Mi Idiem
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-        - nombre: Upgrade idiem.cl
+          estado:
+          avance:
+
+        - wb: Upgrade idiem.cl
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Tickets e issues correctivos
-      wb:
-        - nombre: Tickets e issues Boleta Digital
+          estado:
+          avance:
+
+    - hito: Tickets e issues correctivos
+      tareas:
+        - wb: Tickets e issues Boleta Digital
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Tickets e issues Intranet Azul
+          estado:
+          avance:
+
+        - wb: Tickets e issues Intranet Azul
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Tickets e issues IntranetDTI
+          estado:
+          avance:
+
+        - wb: Tickets e issues IntranetDTI
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: alta
-          
-        - nombre: Tickets e issues SOL
+          estado:
+          avance:
+
+        - wb: Tickets e issues SOL
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Tickets e issues Plataforma de clientes
+          estado:
+          avance:
+
+        - wb: Tickets e issues Plataforma de clientes
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: baja
-          
-    - nombre: Mejoras técnicas IntraDTI
-      wb:
-    - nombre: Mejoras técnicas SOL
-      wb:
-        - nombre: Reemplazo "obra" por "oportunidad"
+          estado:
+          avance:
+
+    - hito: Mejoras técnicas IntraDTI
+      tareas:
+    - hito: Mejoras técnicas SOL
+      tareas:
+        - wb: Reemplazo "obra" por "oportunidad"
           tamaño: S
-          dias: 5
-          puntos: 3
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Logs de registro de transacciones SOL
+          estado:
+          avance:
+
+        - wb: Logs de registro de transacciones SOL
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
-        - nombre: Solución SOL APP borrado de BD
+          estado:
+          avance:
+
+        - wb: Solución SOL APP borrado de BD
           tamaño: M
-          dias: 15
-          puntos: 8
+          asignado: []
           incertidumbre: media
-          
+          estado:
+          avance:
+
