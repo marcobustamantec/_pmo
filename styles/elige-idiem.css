@@ -1,5 +1,5 @@
 /* @theme elige-idiem */
-@import "default";
+/* @import "default"; */
 
 /* ============================= */
 /* BASE                          */
@@ -20,20 +20,39 @@ section {
   background: #fff;
 }
 
+/* Láminas de contenido: espacio superior reducido a la mitad (85px -> 43px) */
+section:not(.portada):not(.separador):not(.gracias) {
+  padding-top: 43px;
+}
+
 /* ============================= */
 /* TIPOGRAFÍAS Y PÁRRAFOS BASE   */
 /* ============================= */
 
-h1 { font-size: 44px; font-weight: 700; margin: 0 0 14px 0; }
-h3 { font-size: 22px; font-weight: 700; margin: 14px 0 12px 0; }
-h4 { font-size: 20px; font-weight: 700; margin: 12px 0 10px 0; }
+h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 14px 0 12px 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 0 10px 0;
+}
 
 /* Título principal de la lámina (h2) */
 section:not(.portada) h2 {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   padding-left: 10px;
   border-left: 3px solid #D80B12;
 }
@@ -44,7 +63,7 @@ section:not(.portada) p {
   line-height: 1.48;
   margin-left: 4px;
   padding-left: 20px;
-  margin-bottom: 12px; 
+  margin-bottom: 12px;
 }
 
 
@@ -56,14 +75,14 @@ section:not(.portada) p {
 section:not(.portada) ul,
 section:not(.portada) ol {
   margin-left: 14px;
-  margin-bottom: 24px; 
+  margin-bottom: 24px;
 }
 
 /* Viñetas 1er nivel: Más holgura */
 section:not(.portada) li {
   font-size: 18px;
-  line-height: 1.24; 
-  margin-bottom: 5px; 
+  line-height: 1.24;
+  margin-bottom: 5px;
 }
 
 /* Contenedor de 2do nivel (anidado) */
@@ -77,7 +96,7 @@ section:not(.portada) li ol {
 section:not(.portada) li li {
   font-size: 17px;
   line-height: 1.3;
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 }
 
 
@@ -86,22 +105,24 @@ section:not(.portada) li li {
 /* ============================= */
 
 section:not(.portada) table {
-  width: 95% !important; 
+  width: 95% !important;
   max-width: 100%;
-  
-  margin: 32px auto 40px !important; 
-  
+
+  margin: 32px auto 40px !important;
+
   display: table;
   border-collapse: collapse;
-  
-  font-size: 16px; 
-  line-height: 1.6; 
+
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 section:not(.portada) th,
 section:not(.portada) td {
-  padding: 14px 20px;  
-  vertical-align: middle; 
+  padding: 14px 20px;
+  vertical-align: middle;
+  border: none;
+  border-bottom: 0.5px solid #d9d9d9;
 }
 
 section:not(.portada) .cols {
@@ -111,6 +132,7 @@ section:not(.portada) .cols {
 img {
   border: 1px solid #9e9999;
 }
+
 /* ============================= */
 /* COLUMNAS PARA LÁMINAS         */
 /* ============================= */
@@ -120,8 +142,9 @@ img {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  gap: 24px; 
-  align-items: stretch; /* <-- CAMBIO CLAVE: Hace que todas midan lo mismo que la más alta */
+  gap: 24px;
+  align-items: stretch;
+  /* <-- CAMBIO CLAVE: Hace que todas midan lo mismo que la más alta */
 }
 
 .cols p {
@@ -147,14 +170,15 @@ img {
   margin-bottom: 2px !important;
 }
 
-.cols > .col {
+.cols>.col {
   padding: 0 10px;
   min-width: 0;
 }
 
 /* Divisor entre columnas */
-.cols > .col + .col {
-  border-left: 0.5px solid #d9d9d9; /* <-- CAMBIO: Solo border-left actúa como divisor */
+.cols>.col+.col {
+  border-left: 0.5px solid #d9d9d9;
+  /* <-- CAMBIO: Solo border-left actúa como divisor */
   padding-left: 20px;
 }
 
@@ -167,7 +191,7 @@ img {
   width: 100%;
 }
 
-.cols > .col.center {
+.cols>.col.center {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,15 +199,16 @@ img {
   text-align: center;
 }
 
-.cols > .col.center p {
+.cols>.col.center p {
   margin-left: 0 !important;
   margin-top: 0;
   margin-bottom: 0 !important;
 }
 
-.cols > .col.center img {
+.cols>.col.center img {
   display: inline-block;
 }
+
 /* ============================= */
 /* CARDS                         */
 /* ============================= */
@@ -238,13 +263,17 @@ img {
   line-height: 1.2 !important;
   margin-bottom: 3px !important;
 }
+
 /* ==================================================== */
 /* 2. ESTADO INACTIVO PARA LA TARJETA                   */
 /* ==================================================== */
 .card.inactiva {
-  opacity: 0.45;         /* La hace un 55% transparente */
-  background: rgba(0, 0, 0, 0.015); /* Fondo más sutil */
-  border: 1px dashed rgba(0, 0, 0, 0.1); /* Borde punteado opcional para resaltar que no está activa */
+  opacity: 0.45;
+  /* La hace un 55% transparente */
+  background: rgba(0, 0, 0, 0.015);
+  /* Fondo más sutil */
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  /* Borde punteado opcional para resaltar que no está activa */
   /* filter: grayscale(100%);  <-- (Opcional) descomenta esto si además quieres que se vea en blanco y negro */
 }
 
@@ -259,7 +288,8 @@ img {
 }
 
 .card li {
-  font-size: 14px !important; /* Viñetas compactas en cards */
+  font-size: 14px !important;
+  /* Viñetas compactas en cards */
   line-height: 1.2 !important;
   margin-bottom: 3px !important;
 }
@@ -282,7 +312,7 @@ img {
 section .mermaid {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  display: flex;            
+  display: flex;
   justify-content: center;
   width: 100%;
 }
@@ -330,7 +360,9 @@ section.compact table {
   font-size: 14px;
   line-height: 1.25;
 }
-section.compact th, section.compact td {
+
+section.compact th,
+section.compact td {
   padding: 4px 6px;
 }
 
@@ -338,7 +370,9 @@ section.dense table {
   font-size: 13px;
   line-height: 1.2;
 }
-section.dense th, section.dense td {
+
+section.dense th,
+section.dense td {
   padding: 3px 4px;
 }
 
@@ -355,37 +389,38 @@ section:not(.portada)::before {
   width: 100%;
   height: 60px;
   background:
-    url("../styles/img/elige-idiem.png") no-repeat left 10px center,
+    /* 1. El texto a la izquierda */
+    url("./img/elige-idiem.png") no-repeat left 30px center,
+    /* 2. El logo idiem (logo.png) alineado a la derecha */
+    url("./img/logo.png") no-repeat right 140px center,
     #E6E6E6;
-  background-size: 260px auto, auto;
+  /* Ajusta "auto 35px" si quieres el logo más grande o chico */
+  background-size: 260px auto, auto 35px, auto;
 }
 
-section:not(.portada) footer { display: none; }
+section:not(.portada) footer {
+  display: none;
+}
 
-
-/* NÚMERO DE PÁGINA CENTRADO */
+/* NÚMERO DE PÁGINA AL PIE (Centrado abajo en la franja gris) */
 section:not(.portada) .pagination {
   position: absolute !important;
   left: 0 !important;
   right: 0 !important;
-  bottom: 20px !important;
+  bottom: 15px !important;
+  /* Ajusta esto para subir/bajar el número en la franja */
   width: 100% !important;
   text-align: center !important;
   font-size: 16px !important;
-  color: #666;
+  color: #131212;
   margin: 0 !important;
+  z-index: 20 !important;
+  /* Asegura que se vea por encima de la franja gris */
 }
 
 /* logo derecha */
 section:not(.portada)::after {
-  content: "";
-  position: absolute;
-  right: 140px;
-  bottom: 10px;
-  width: 120px;
-  height: 40px;
-  background: url("../styles/img/logo.svg") no-repeat right center;
-  background-size: contain;
+  display: none;
 }
 
 
@@ -397,8 +432,8 @@ section.portada {
   justify-content: center;
   background-color: #E6E6E6;
   background-image:
-    url("../styles/img/circulo.png"),
-    url("../styles/img/logo.svg");
+    url("./img/circulo.png"),
+    url("./img/logo.svg");
   background-repeat: no-repeat, no-repeat;
   background-position:
     right 0 center,
@@ -415,7 +450,7 @@ section.portada::before {
   top: 18px;
   width: 260px;
   height: 40px;
-  background: url("../styles/img/elige-idiem.png") no-repeat left top;
+  background: url("./img/elige-idiem.png") no-repeat left top;
   background-size: contain;
 }
 
@@ -428,8 +463,13 @@ section.portada footer {
   display: block;
 }
 
-section.portada .pagination { display: none !important; }
-section.portada::after { display: none !important; }
+section.portada .pagination {
+  display: none !important;
+}
+
+section.portada::after {
+  display: none !important;
+}
 
 
 /* ============================= */
@@ -461,8 +501,8 @@ section.gracias {
   align-items: flex-end;
   padding-bottom: 40%;
   background-image:
-    url("../styles/img/contacto.svg"),
-    url("../styles/img/elige-idiem.png");
+    url("./img/contacto.svg"),
+    url("./img/elige-idiem.png");
   background-repeat: no-repeat, no-repeat;
   background-position:
     center calc(100% - 0px),
@@ -506,8 +546,8 @@ section.separador {
 /* 1. Juntar la barra gris y los dos logos en la capa inferior (::before) */
 section.separador::before {
   background:
-    url("../styles/img/elige-idiem.png") no-repeat left 10px center,
-    url("../styles/img/logo.svg") no-repeat right 140px center,
+    url("./img/elige-idiem.png") no-repeat left 10px center,
+    url("./img/logo.svg") no-repeat right 140px center,
     #E6E6E6 !important;
   background-size: 260px auto, 120px auto, auto !important;
   z-index: 10 !important;
@@ -523,16 +563,18 @@ section.separador::after {
   bottom: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  
+
   /* Posicionamos la imagen a la derecha, que es su posición natural */
-  background: url("../styles/img/circulo_separador.png") no-repeat left center !important;
-  background-size: 900px auto !important; /* Si necesitas que el anillo sea más grueso/delgado, cambia el 900px */
-  
-  z-index: 1 !important; /* Lo dejamos al fondo */
+  background: url("./img/circulo_separador.png") no-repeat left center !important;
+  background-size: 900px auto !important;
+  /* Si necesitas que el anillo sea más grueso/delgado, cambia el 900px */
+
+  z-index: 1 !important;
+  /* Lo dejamos al fondo */
 }
 
 /* 3. Asegurar que el texto pase por encima de la imagen del círculo */
-section.separador h2, 
+section.separador h2,
 section.separador p {
   position: relative;
   z-index: 2;
@@ -569,19 +611,23 @@ section.separador .pagination {
 
 .takeaway {
   margin-top: auto;
-/*  background-color: #F4F5F7;    */
+  /*  background-color: #F4F5F7;    */
   padding: 16px 24px;
   border-radius: 8px;
-  border-top: 1px solid #d4d5d7; /* Línea gris muy sutil, un poco más oscura que el fondo */
+  border-top: 1px solid #d4d5d7;
+  /* Línea gris muy sutil, un poco más oscura que el fondo */
   font-size: 20px;
   font-weight: 700;
-  font-style: italic;            /* Agrega el tono de "cita" o reflexión final */
+  font-style: italic;
+  /* Agrega el tono de "cita" o reflexión final */
   color: #222222;
-  text-align: right;             /* Rompe la simetría y le da peso al cierre */
+  text-align: right;
+  /* Rompe la simetría y le da peso al cierre */
   line-height: 1.35;
   width: 100%;
   box-sizing: border-box;
 }
+
 /* ============================= */
 /* AJUSTES DE DENSIDAD EN LÁMINAS */
 /* ============================= */
@@ -592,35 +638,41 @@ section:not(.portada) .card p {
   line-height: 1.26;
   margin: 0 0 7px 0;
 }
+
 section:not(.portada) .card ul,
 section:not(.portada) .card ol {
   margin: 5px 0 6px 0 !important;
   padding-left: 18px;
 }
+
 section:not(.portada) .card li {
   font-size: 14px !important;
   line-height: 1.2 !important;
   margin-bottom: 3px !important;
 }
+
 /* Card dentro de columna: ligeramente más pequeño. */
 section:not(.portada) .cols .card p {
   font-size: 13px;
   line-height: 1.22;
   margin-bottom: 5px;
 }
+
 section:not(.portada) .cols .card li {
   font-size: 12px !important;
   line-height: 1.18 !important;
   margin-bottom: 2px !important;
 }
+
 section:not(.portada) .cols .card ul,
 section:not(.portada) .cols .card ol {
   padding-left: 15px;
   margin: 4px 0 !important;
 }
+
 /* Reduce sangría en listas dentro de columnas normales. */
-section:not(.portada) .cols > .col > ul,
-section:not(.portada) .cols > .col > ol {
+section:not(.portada) .cols>.col>ul,
+section:not(.portada) .cols>.col>ol {
   margin-left: 0;
   padding-left: 17px;
   margin-bottom: 10px;
@@ -634,27 +686,35 @@ section:not(.portada) .card {
   line-height: 1.30;
   padding: 12px 14px;
 }
+
 section:not(.portada) .card p {
   font-size: 16px;
   line-height: 1.30 !important;
   margin: 0 0 8px 0 !important;
 }
-section:not(.portada) .card strong { font-size: 17px; }
+
+section:not(.portada) .card strong {
+  font-size: 17px;
+}
+
 section:not(.portada) .card li {
   font-size: 15px !important;
   line-height: 1.25 !important;
   margin-bottom: 4px !important;
 }
+
 section:not(.portada) .cols .card {
   font-size: 15px;
   line-height: 1.28;
   padding: 10px 12px;
 }
+
 section:not(.portada) .cols .card p {
   font-size: 15px;
   line-height: 1.28 !important;
   margin: 0 0 6px 0 !important;
 }
+
 section:not(.portada) .cols .card li {
   font-size: 14px !important;
   line-height: 1.22 !important;
@@ -670,13 +730,16 @@ section:not(.portada) .cols {
   margin-top: 8px;
   margin-bottom: 16px;
 }
-section:not(.portada) .cols > .col {
+
+section:not(.portada) .cols>.col {
   padding: 0 3px;
   min-width: 0;
 }
-section:not(.portada) .cols > .col + .col {
+
+section:not(.portada) .cols>.col+.col {
   padding-left: 10px;
 }
+
 /* Centrar imágenes Markdown dentro de columnas. Quitar sangría del párrafo que las contiene. */
 section:not(.portada) .cols .col p:has(> img) {
   margin-left: 0 !important;
@@ -684,6 +747,7 @@ section:not(.portada) .cols .col p:has(> img) {
   display: flex;
   justify-content: center;
 }
+
 section:not(.portada) .cols .col img {
   display: block;
   max-width: 100%;
@@ -691,14 +755,17 @@ section:not(.portada) .cols .col img {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Opcional por lámina en Markdown: <!-- _class: imagen-izquierda --> */
 section.imagen-izquierda .cols .col p:has(> img) {
   justify-content: flex-start;
 }
+
 section.imagen-izquierda .cols .col img {
   margin-left: 0;
   margin-right: auto;
 }
+
 /* Cards: texto similar al resto, menos espacio interior. */
 section:not(.portada) .card,
 section:not(.portada) .cols .card {
@@ -706,20 +773,26 @@ section:not(.portada) .cols .card {
   line-height: 1.3;
   padding: 11px 13px;
 }
+
 section:not(.portada) .card p,
 section:not(.portada) .cols .card p {
   font-size: 16px;
   line-height: 1.3 !important;
   margin: 0 0 6px 0 !important;
 }
+
 section:not(.portada) .card strong,
-section:not(.portada) .cols .card strong { font-size: 17px; }
+section:not(.portada) .cols .card strong {
+  font-size: 17px;
+}
+
 section:not(.portada) .card li,
 section:not(.portada) .cols .card li {
   font-size: 15px !important;
   line-height: 1.23 !important;
   margin-bottom: 3px !important;
 }
+
 section:not(.portada) .card ul,
 section:not(.portada) .card ol {
   padding-left: 16px;
@@ -733,11 +806,13 @@ section:not(.portada) .card,
 section:not(.portada) .cols .card {
   line-height: 1.45;
 }
+
 section:not(.portada) .card p,
 section:not(.portada) .cols .card p {
   line-height: 1.45 !important;
   margin-bottom: 9px !important;
 }
+
 section:not(.portada) .card li,
 section:not(.portada) .cols .card li {
   line-height: 1.38 !important;
@@ -748,35 +823,46 @@ section:not(.portada) .cols .card li {
 /* ===================================================== */
 /* COLUMNAS: VIÑETAS MÁS LEGIBLES                         */
 /* ===================================================== */
-section:not(.portada) .cols > .col > ul > li,
-section:not(.portada) .cols > .col > ol > li {
+section:not(.portada) .cols>.col>ul>li,
+section:not(.portada) .cols>.col>ol>li {
   font-size: 16px !important;
   line-height: 1.48 !important;
   margin-bottom: 11px !important;
 }
 
-section:not(.portada) .cols > .col > ul > li li,
-section:not(.portada) .cols > .col > ol > li li {
+section:not(.portada) .cols>.col>ul>li li,
+section:not(.portada) .cols>.col>ol>li li {
   font-size: 15px !important;
   line-height: 1.42 !important;
   margin-bottom: 7px !important;
 }
 
 /* Destacados puntuales desde Markdown/HTML */
-.gris, .texto-gris { color: #777777; }
-.negrita { font-weight: 700; }
-.gris-negrita { color: #777777; font-weight: 700; }
+.gris,
+.texto-gris {
+  color: #777777;
+}
+
+.negrita {
+  font-weight: 700;
+}
+
+.gris-negrita {
+  color: #777777;
+  font-weight: 700;
+}
 
 
 /* ===================================================== */
 /* COLUMNAS: PÁRRAFOS SIN VIÑETAS, ANCHO COMPLETO         */
 /* ===================================================== */
-section:not(.portada) .cols > .col:not(.center) > p {
+section:not(.portada) .cols>.col:not(.center)>p {
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  margin-bottom: 22px !important;  /* antes 16px: sube/baja a gusto */
+  margin-bottom: 22px !important;
+  /* antes 16px: sube/baja a gusto */
   line-height: 1.4 !important;
 }
 
@@ -784,9 +870,11 @@ section:not(.portada) .cols > .col:not(.center) > p {
 section:not(.portada) .cols {
   gap: 10px;
 }
-section:not(.portada) .cols > .col {
+
+section:not(.portada) .cols>.col {
   padding: 0;
 }
-section:not(.portada) .cols > .col + .col {
+
+section:not(.portada) .cols>.col+.col {
   padding-left: 8px;
 }

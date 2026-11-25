@@ -35,7 +35,8 @@ SEMAFORO = {
     "amarillo": "🟡 Atención",
     "rojo": "🔴 Crítico",
 }
-TENDENCIA = {"mejora": "↗ mejora", "estable": "→ estable", "empeora": "↘ empeora"}
+TENDENCIA = {"mejora": "↗ mejora",
+             "estable": "→ estable", "empeora": "↘ empeora"}
 NIVEL = {
     "critico": "🔴 Crítico",
     "alto": "🟠 Alto",
@@ -44,7 +45,8 @@ NIVEL = {
 }
 PROB = {"baja": 1, "media": 2, "alta": 3}
 IMPACTO = {"bajo": 1, "medio": 2, "alto": 3}
-ESTADO_DEP = {"pendiente": "Pendiente", "en_curso": "En curso", "resuelto": "Resuelto"}
+ESTADO_DEP = {"pendiente": "Pendiente",
+              "en_curso": "En curso", "resuelto": "Resuelto"}
 ESTADO_DEC = {
     "pendiente": "Pendiente",
     "en_revision": "En revisión",
@@ -56,7 +58,7 @@ FILAS_POR_SLIDE = 7
 
 FRONT_MATTER_DEFECTO = """---
 marp: true
-theme: default
+theme: elige-idiem
 paginate: true
 size: 16:9
 ---"""
@@ -65,7 +67,10 @@ ESTILO = """<style>
 section { font-size: 24px; }
 section table { font-size: 0.72em; }
 section h1 { font-size: 1.5em; }
-section h2 { font-size: 1.05em; }
+section h2 { font-size: 1.3em; }
+section h3 { font-size: 1.0em; }
+section.portada { text-align: center; justify-content: center; }
+section.portada h1 { font-size: 2em; }
 </style>"""
 
 
@@ -119,7 +124,7 @@ def tabla(headers, filas, alinear=None):
 
 
 def slides_tabla(titulo, subtitulo, headers, filas, alinear=None,
-                 extra="", por_slide=FILAS_POR_SLIDE):
+                 extra="", por_slide=FILAS_POR_SLIDE, nivel=2):
     """Genera 1..n slides; si la tabla es larga la parte en '(cont)'."""
     if not filas:
         filas = [["—"] + ["—"] * (len(headers) - 1)]
@@ -127,9 +132,9 @@ def slides_tabla(titulo, subtitulo, headers, filas, alinear=None,
     out = []
     for i, bloque in enumerate(bloques):
         t = titulo if i == 0 else f"{titulo} (cont)"
-        s = f"# {t}\n\n"
+        s = f"{'#' * nivel} {t}\n\n"
         if subtitulo:
-            s += f"## {subtitulo}\n\n"
+            s += f"{'#' * (nivel + 1)} {subtitulo}\n\n"
         s += tabla(headers, bloque, alinear) + "\n"
         if extra and i == len(bloques) - 1:
             s += "\n" + extra + "\n"
@@ -146,7 +151,8 @@ def analizar_milestones(ms_yaml):
     for m in proyecto.get("milestone", []) or []:
         wbs = m.get("wb", []) or []
         pts_tot = sum(w.get("puntos", 0) or 0 for w in wbs)
-        pts_ok = sum(w.get("puntos", 0) or 0 for w in wbs if w.get("estado") == "finalizado")
+        pts_ok = sum(w.get("puntos", 0) or 0 for w in wbs if w.get(
+            "estado") == "finalizado")
         n_ok = sum(1 for w in wbs if w.get("estado") == "finalizado")
         estados = {w.get("estado") for w in wbs}
         if wbs and n_ok == len(wbs):
@@ -218,24 +224,28 @@ def nivel_riesgo(item, es_problema=False):
 # ----------------------------------------------------------------------------
 # Construcción del informe
 # ----------------------------------------------------------------------------
-def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
+def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=False):
     hitos = analizar_milestones(d3)
     todos_wb = [w for h in hitos for w in h["wbs"]]
     pts_tot = sum(h["pts_tot"] for h in hitos)
     pts_ok = sum(h["pts_ok"] for h in hitos)
-    n_tot, n_ok = len(todos_wb), sum(1 for w in todos_wb if w.get("estado") == "finalizado")
+    n_tot, n_ok = len(todos_wb), sum(
+        1 for w in todos_wb if w.get("estado") == "finalizado")
     hitos_ok = sum(1 for h in hitos if h["completo"])
 
     # Riesgos / problemas
-    riesgos = [r for r in d4.get("riesgos", []) or [] if r.get("estado") != "cerrado"]
-    riesgos += [r for r in d4.get("emergentes", []) or [] if r.get("estado") != "cerrado"]
-    problemas = [p for p in d4.get("problemas", []) or [] if p.get("estado") != "cerrado"]
+    riesgos = [r for r in d4.get("riesgos", [])
+               or [] if r.get("estado") != "cerrado"]
+    riesgos += [r for r in d4.get("emergentes", [])
+                or [] if r.get("estado") != "cerrado"]
+    problemas = [p for p in d4.get(
+        "problemas", []) or [] if p.get("estado") != "cerrado"]
     bloqueos = [p for p in problemas if p.get("estado") == "materializado"]
     for r in riesgos:
         r["_nivel"] = nivel_riesgo(r)
     for p in problemas:
         p["_nivel"] = nivel_riesgo(p, es_problema=True)
-    n_criticos = sum(1 for x in riesgos + problemas if x["_nivel"] == "critico")
+    n_criticos = sum(1 for x in riesgos if x["_nivel"] == "critico")
 
     # Avance
     av = d2.get("avance", {}) or {}
@@ -263,7 +273,7 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
 
     # --- Portada --------------------------------------------------------
     S.append(
-        "<!-- _class: lead -->\n\n"
+        "<!-- _class: portada -->\n\n"
         f"# {d1.get('nombre', '[Proyecto]')}\n\n"
         f"## Informe de estado y seguimiento\n\n"
         + (f"*{d1['subtitulo']}*\n\n" if d1.get("subtitulo") else "")
@@ -277,39 +287,44 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     filas = [
         ["Estado general", estado_general],
         ["Fase actual", d2.get("fase")],
-        ["Avance real", f"{pts_ok} : {pts_tot} puntos — **{real:.0f}%** (planificado: {plan_txt})"],
+        ["Avance real",
+            f"{pts_ok} : {pts_tot} puntos — **{real:.0f}%** (planificado: {plan_txt})"],
         ["Célula", celula],
         ["Cierre de tareas", f"{n_ok} de {n_tot}"],
         ["Cumplimiento de hitos", f"{hitos_ok} de {len(hitos)}"],
         ["Riesgos identificados", f"{len(riesgos)} (críticos: {n_criticos})"],
         ["Bloqueos activos", len(bloqueos)],
-        ["Término plan / estimado", f"{fecha(f.get('termino_plan'))} / {fecha(f.get('termino_estimado'))}"],
     ]
-    S.append("# 1. Resumen del proyecto\n\n" + tabla(["Dimensión", "Situación"], filas) + "\n")
+    S.append("## Resumen del proyecto\n\n"
+             + tabla(["Dimensión", "Situación"], filas)
+             + f"\n\n### Resumen ejecutivo\n\n{txt(d2.get('situacion'), '')}\n")
 
     desv = d2.get("desviacion", {}) or {}
-    resumen = f"# 1. Resumen del proyecto (cont)\n\n## Resumen ejecutivo\n\n{txt(d2.get('situacion'), '')}\n"
+    s = "## Resumen del proyecto (cont)\n\n"
+    s += (f"**Término plan:** {fecha(f.get('termino_plan'))} · "
+          f"**Término estimado:** {fecha(f.get('termino_estimado'))}\n\n")
     if desv.get("causa") or desv.get("accion"):
-        resumen += "\n**Desviación**\n\n"
+        s += "### Desviación\n\n"
         if desv.get("causa"):
-            resumen += f"- **Causa:** {txt(desv['causa'])}\n"
+            s += f"- **Causa:** {txt(desv['causa'])}\n"
         if desv.get("accion"):
-            resumen += f"- **Acción:** {txt(desv['accion'])}\n"
-    S.append(resumen)
-
-    if d2.get("avances") or d2.get("alertas"):
-        s = "# 1. Resumen del proyecto (cont)\n\n"
-        if d2.get("avances"):
-            s += "## Avances del período\n\n" + "".join(f"- {txt(a)}\n" for a in d2["avances"]) + "\n"
-        if d2.get("alertas"):
-            s += "## Alertas\n\n" + "".join(f"- {txt(a)}\n" for a in d2["alertas"])
-        S.append(s)
+            s += f"- **Acción:** {txt(desv['accion'])}\n"
+        s += "\n"
+    if d2.get("avances"):
+        s += "### Avances del período\n\n" + \
+            "".join(f"- {txt(a)}\n" for a in d2["avances"]) + "\n"
+    if d2.get("alertas"):
+        s += "### Alertas\n\n" + \
+            "".join(f"- {txt(a)}\n" for a in d2["alertas"])
+    S.append(s)
 
     # --- 2. Alcance y objetivos -----------------------------------------
-    s = f"# 2. Alcance y objetivos\n\n## Objetivo general\n\n{txt(d1.get('objetivo'), '')}\n\n## Alcance\n\n"
-    s += "".join(f"{i}. {txt(a)}\n" for i, a in enumerate(d1.get("alcance", []) or [], 1))
+    s = f"## Alcance y objetivos\n\n### Objetivo general\n\n{txt(d1.get('objetivo'), '')}\n\n### Alcance\n\n"
+    s += "".join(f"{i}. {txt(a)}\n" for i,
+                 a in enumerate(d1.get("alcance", []) or [], 1))
     if d1.get("resultados_esperados"):
-        s += "\n## Resultados esperados\n\n" + "".join(f"- {txt(r)}\n" for r in d1["resultados_esperados"])
+        s += "\n### Resultados esperados\n\n" + \
+            "".join(f"- {txt(r)}\n" for r in d1["resultados_esperados"])
     if d1.get("cambios_alcance"):
         s += f"\n**Cambios de alcance:** {txt(d1['cambios_alcance'])}\n"
     S.append(s)
@@ -317,10 +332,12 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     # --- 3. Fases / hitos -----------------------------------------------
     filas = [[h["nombre"], h["descripcion"], h["pts_ok"], h["pts_tot"],
               f"{pct(h['pts_ok'], h['pts_tot']):.0f}%"] for h in hitos]
-    filas.append([f"**Total**", "", f"**{pts_ok}**", f"**{pts_tot}**", f"**{pct(pts_ok, pts_tot):.0f}%**"])
+    filas.append([f"**Total**", "", f"**{pts_ok}**",
+                 f"**{pts_tot}**", f"**{pct(pts_ok, pts_tot):.0f}%**"])
     S += slides_tabla(
-        "3. Fases del proyecto", "Avance por hitos",
-        ["Componente / Entregable", "Descripción", "Puntos cerrados", "Puntos totales", "Avance"],
+        "Fases del proyecto", "Avance por hitos",
+        ["Componente / Entregable", "Descripción",
+            "Puntos cerrados", "Puntos totales", "Avance"],
         filas, ["l", "l", "r", "r", "r"], por_slide=8,
     )
 
@@ -333,7 +350,7 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     filas += [[p["id"], p["titulo"], "—", str(p.get("impacto", "—")).capitalize(),
                NIVEL[p["_nivel"]]] for p in problemas]
     S += slides_tabla(
-        "4. Riesgos y problemas",
+        "Riesgos y problemas",
         "Situaciones que pueden afectar o están afectando el proyecto",
         ["ID", "Riesgo / Problema", "Probabilidad", "Impacto", "Nivel"], filas,
     )
@@ -341,13 +358,14 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     filas = [[x["id"], x.get("accion"), x.get("resp"), fecha(x.get("fecha"))]
              for x in riesgos + problemas]
     S += slides_tabla(
-        "4. Riesgos y problemas (cont)", "Plan de respuesta",
+        "Riesgos y problemas (cont)", "Plan de respuesta",
         ["ID", "Acción preventiva / correctiva", "Responsable", "Fecha"], filas,
     )
 
-    filas = [[x["id"], x.get("contingencia")] for x in riesgos if x.get("contingencia")]
+    filas = [[x["id"], x.get("contingencia")]
+             for x in riesgos if x.get("contingencia")]
     if filas:
-        S += slides_tabla("4. Riesgos y problemas (cont)", "Planes de contingencia",
+        S += slides_tabla("Riesgos y problemas (cont)", "Planes de contingencia",
                           ["ID", "Contingencia si el riesgo se materializa"], filas)
 
     # --- 5. Decisiones --------------------------------------------------
@@ -355,22 +373,25 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
               ESTADO_DEC.get(x.get("estado"), txt(x.get("estado")).capitalize())]
              for x in d2.get("decisiones", []) or []]
     S += slides_tabla(
-        "5. Decisiones y acuerdos",
+        "Decisiones y acuerdos",
         "Definiciones necesarias para mantener la ejecución del proyecto",
-        ["Decisión / Acuerdo", "Responsable de decidir", "Fecha requerida", "Estado"], filas,
+        ["Decisión / Acuerdo", "Responsable de decidir",
+            "Fecha requerida", "Estado"], filas,
     )
 
     # --- 6. Capacidad ---------------------------------------------------
     pers = capacidad(hitos)
     pend_total = sum(v["asig"] - v["ok"] for v in pers.values()) or 1
     filas = []
-    ordenadas = sorted(pers.items(), key=lambda kv: (kv[0][1] != "Senior", -(kv[1]["asig"] - kv[1]["ok"])))
+    ordenadas = sorted(pers.items(), key=lambda kv: (
+        kv[0][1] != "Senior", -(kv[1]["asig"] - kv[1]["ok"])))
     for (nombre, rol), v in ordenadas:
         pend = v["asig"] - v["ok"]
         share = pct(pend, pend_total)
         obs = f"Concentra {share:.0f}% de los puntos pendientes" if share >= 35 else (
             "Sin carga pendiente" if pend == 0 else "")
-        filas.append([nombre, rol, v["asig"], v["ok"], pend, v["tareas_abiertas"], obs])
+        filas.append([f"{nombre} ({rol})", v["asig"], v["ok"],
+                     pend, v["tareas_abiertas"], obs])
     extra = ""
     if d2.get("alertas_capacidad"):
         extra += "".join(f"- ⚠ {txt(a)}\n" for a in d2["alertas_capacidad"])
@@ -379,9 +400,10 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     extra += ("\n<small>Los puntos de una tarea con más de un desarrollador se cuentan completos "
               "para cada uno.</small>")
     S += slides_tabla(
-        "6. Capacidad", "Puntos asignados por desarrollador",
-        ["Persona", "Perfil", "Puntos asignados", "Cerrados", "Pendientes", "Tareas abiertas", "Observación"],
-        filas, ["l", "l", "r", "r", "r", "r", "l"], extra=extra, por_slide=9,
+        "Capacidad", "Puntos asignados por desarrollador",
+        ["Recurso / Perfil", "Puntos asignados", "Cerrados",
+            "Pendientes", "Tareas abiertas", "Observación"],
+        filas, ["l", "r", "r", "r", "r", "l"], extra=extra, por_slide=9,
     )
 
     # --- 7. Dependencias y bloqueos -------------------------------------
@@ -400,13 +422,14 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     if d2.get("apoyo"):
         bl += f"\n**Apoyo requerido:** {txt(d2['apoyo'])}\n"
     S += slides_tabla(
-        "7. Dependencias y bloqueos",
+        "Dependencias y bloqueos",
         "Condiciones externas necesarias para continuar la ejecución",
         ["Dependencia", "Contraparte", "Requerimiento", "Fecha requerida", "Estado"],
         filas, extra=bl, por_slide=4,
     )
 
     # --- 8. Plan de trabajo pendiente -----------------------------------
+    PRIORIDAD = {"En curso": "Alta", "Pendiente": "Media", "Pausado": "Baja"}
     filas = []
     for h in hitos:
         if h["completo"]:
@@ -415,8 +438,13 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
         resp = sorted({w["senior"] for w in abiertos if w.get("senior")} |
                       {j for w in abiertos for j in (w.get("junior") or [])})
         pend = h["pts_tot"] - h["pts_ok"]
-        filas.append([h["nombre"], ", ".join(resp), f"{len(abiertos)} de {h['n_tot']}",
-                      pend, h["estado"]])
+        # inicio / fin: opcionales en el YAML (campos 'inicio' y 'fin' del WB)
+        ini = [w["inicio"] for w in abiertos if w.get("inicio")]
+        fin = [w["fin"] for w in abiertos if w.get("fin")]
+        filas.append([f"{h['nombre']} ({pend} pts)", ", ".join(resp),
+                      fecha(min(ini)) if ini else "Por definir",
+                      fecha(max(fin)) if fin else "Por definir",
+                      PRIORIDAD.get(h["estado"], "Media"), h["estado"]])
     sh = d2.get("siguiente_hito", {}) or {}
     extra = ""
     if sh:
@@ -424,10 +452,10 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
         extra = (f"**Siguiente hito:** {txt(sh.get('nombre'))} — {fecha(sh.get('fecha'))} "
                  f"(resp.: {txt(resp_h)}). Criterio: {txt(sh.get('criterio'))}.")
     S += slides_tabla(
-        "8. Plan de trabajo pendiente",
+        "Plan de trabajo pendiente",
         "Actividades necesarias para completar el proyecto",
-        ["Actividad (hito)", "Responsables", "Tareas abiertas", "Puntos pendientes", "Estado"],
-        filas, ["l", "l", "r", "r", "l"], extra=extra, por_slide=8,
+        ["Actividad", "Responsable", "Inicio", "Término", "Prioridad", "Estado"],
+        filas, extra=extra, por_slide=9,
     )
 
     # --- 9. Próximos pasos ----------------------------------------------
@@ -438,13 +466,13 @@ def construir(d1, d2, d3, d4, front_matter, inyectar_estilo=True):
     extra = "### Foco del siguiente período\n\n" + "".join(
         f"{i}. {txt(x)}.\n" for i, x in enumerate(foco, 1))
     S += slides_tabla(
-        "9. Próximos pasos", "Compromisos concretos para el siguiente período",
+        "Próximos pasos", "Compromisos concretos para el siguiente período",
         ["N°", "Acción", "Responsable", "Fecha compromiso", "Resultado esperado"],
         filas, extra=extra, por_slide=5,
     )
 
     if d2.get("conclusion"):
-        S.append(f"# Conclusión\n\n{txt(d2['conclusion'], '')}\n")
+        S.append(f"## Conclusión\n\n{txt(d2['conclusion'], '')}\n")
 
     estilo = ESTILO + "\n\n" if inyectar_estilo else ""
     return front_matter + "\n\n" + estilo + "\n---\n\n".join(S)
@@ -462,9 +490,24 @@ def tema_de(front_matter: str) -> str:
     return m.group(1) if m else "default"
 
 
+def fijar_footer_fecha(front_matter: str, f) -> str:
+    """Actualiza la fecha (dd.mmm.aaaa) del footer con fecha_reporte."""
+    meses = "ene feb mar abr may jun jul ago sep oct nov dic".split()
+    if isinstance(f, str):
+        try:
+            f = dt.date.fromisoformat(f)
+        except ValueError:
+            return front_matter
+    if not isinstance(f, (dt.date, dt.datetime)):
+        return front_matter
+    nueva = f"{f.day:02d}.{meses[f.month - 1]}.{f.year}"
+    return re.sub(r"(?m)^(footer:.*?)\d{2}\.[a-z]{3}\.\d{4}", lambda m: m[1] + nueva, front_matter)
+
+
 def leer_front_matter(path: Path) -> str:
     if path.exists():
-        m = re.match(r"\A---\n.*?\n---", path.read_text(encoding="utf-8"), re.S)
+        m = re.match(r"\A---\n.*?\n---",
+                     path.read_text(encoding="utf-8"), re.S)
         if m:
             return m.group(0)
     return FRONT_MATTER_DEFECTO
@@ -472,23 +515,29 @@ def leer_front_matter(path: Path) -> str:
 
 # ----------------------------------------------------------------------------
 def main():
-    ap = argparse.ArgumentParser(description="Genera el informe Marp desde los YAML.")
-    ap.add_argument("-d", "--dir", default=".", help="Carpeta con los YAML (default: .)")
-    ap.add_argument("-o", "--salida", default="informe.md", help="Archivo Markdown de salida")
-    ap.add_argument("--tema", help="Nombre del tema Marp (ej: elige-idiem); pisa el de marp.md")
+    ap = argparse.ArgumentParser(
+        description="Genera el informe Marp desde los YAML.")
+    ap.add_argument("-d", "--dir", default=".",
+                    help="Carpeta con los YAML (default: .)")
+    ap.add_argument("-o", "--salida", default="informe.md",
+                    help="Archivo Markdown de salida")
+    ap.add_argument(
+        "--tema", help="Nombre del tema Marp (ej: elige-idiem); pisa el de marp.md")
     ap.add_argument("--css", help="Archivo .css (o carpeta) del tema, para marp --theme-set. "
                                   "Si se omite, se busca un .css junto a los YAML o en ./themes")
     ap.add_argument("--ajustar-fuente", action="store_true",
                     help="Inyectar tamaños de fuente propios (por defecto solo con theme: default)")
-    ap.add_argument("--html", action="store_true", help="Exportar también a HTML con marp-cli")
-    ap.add_argument("--pdf", action="store_true", help="Exportar también a PDF con marp-cli")
+    ap.add_argument("--html", action="store_true",
+                    help="Exportar también a HTML con marp-cli")
+    ap.add_argument("--pdf", action="store_true",
+                    help="Exportar también a PDF con marp-cli")
     a = ap.parse_args()
 
     base = Path(a.dir)
     fm = leer_front_matter(base / "marp.md")
     if a.tema:
         fm = fijar_tema(fm, a.tema)
-    inyectar = a.ajustar_fuente or tema_de(fm) == "default"
+    inyectar = a.ajustar_fuente
 
     css = Path(a.css) if a.css else None
     if css is None:
@@ -497,8 +546,10 @@ def main():
                 css = cand[0] if len(cand) == 1 else cand[0].parent
                 break
 
+    d1 = cargar(base / "01_definicion.yml")
+    fm = fijar_footer_fecha(fm, d1.get("fecha_reporte"))
     md = construir(
-        cargar(base / "01_definicion.yml"),
+        d1,
         cargar(base / "02_reporte_status.yml"),
         cargar(base / "03_milestones.yml"),
         cargar(base / "04_riesgos.yml"),

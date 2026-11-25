@@ -3,9 +3,10 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+footer: "GDD | Reporte de estado del proyecto | 24.nov.2026"
 ---
 
-<!-- _class: lead -->
+<!-- _class: portada -->
 
 # [Nombre del proyecto]
 
@@ -20,7 +21,7 @@ Fecha de actualización: [Fecha]
 
 ---
 
-# 1. Resumen del proyecto
+## Resumen del proyecto
 
 | Dimensión             | Situación                                            |
 | --------------------- | ---------------------------------------------------- |
@@ -33,28 +34,28 @@ Fecha de actualización: [Fecha]
 | Riesgos identificados | [total_riesgos] (críticos: [total_riesgos_críticos]) |
 | Bloqueos activos      | [total_bloqueos_activos]                             |
 
-## Resumen ejecutivo
+### Resumen ejecutivo
 
 [situacion]
 
 ---
 
-# 2. Alcance y objetivos
+## Alcance y objetivos
 
-## Objetivo general
+### Objetivo general
 
 [objetivo]
 
-## Alcance
+### Alcance
 
 1. [alcance].
 
 
 ---
 
-# 3. Fases del proyecto
+## Fases del proyecto
 
-## Avance por hitos
+### Avance por hitos
 
 | Componente / Entregable | Descripción             | Puntos cerrados           | Puntos totales            | Avance     |
 | ----------------------- | ----------------------- | ------------------------- |
@@ -64,9 +65,9 @@ Fecha de actualización: [Fecha]
 
 ---
 
-# 4. Riesgos y problemas
+## Riesgos y problemas
 
-## Situaciones que pueden afectar o están afectando el proyecto
+### Situaciones que pueden afectar o están afectando el proyecto
 
 | ID  | Riesgo / Problema | Probabilidad | Impacto | Nivel      |
 | --- | ----------------- | ------------ | ------- | ---------- |
@@ -76,7 +77,8 @@ Fecha de actualización: [Fecha]
 | P01 | [Problema actual] | —            | Alto    | 🔴 Crítico  |
 
 ---
-# 4. Riesgos y problemas (cont)
+
+## Riesgos y problemas (cont)
 
 ### Plan de respuesta
 
@@ -89,9 +91,9 @@ Fecha de actualización: [Fecha]
 
 ---
 
-# 5. Decisiones y acuerdos
+## Decisiones y acuerdos
 
-## Definiciones necesarias para mantener la ejecución del proyecto
+### Definiciones necesarias para mantener la ejecución del proyecto
 
 | Decisión / Acuerdo | Responsable de decidir | Fecha requerida | Estado      |
 | ------------------ | ---------------------- | --------------- | ----------- |
@@ -105,9 +107,9 @@ Fecha de actualización: [Fecha]
 
 
 
-# 6. Capacidad
+## Capacidad
 
-## Puntos asignados por desarrollador
+### Puntos asignados por desarrollador
 
 | Recurso / Perfil   | Dedicación planificada | Dedicación requerida | Observación   |
 | ------------------ | ---------------------: | -------------------: | ------------- |
@@ -121,9 +123,9 @@ Fecha de actualización: [Fecha]
 ---
 
 
-# 7. Dependencias y bloqueos
+## Dependencias y bloqueos
 
-## Condiciones externas necesarias para continuar la ejecución
+### Condiciones externas necesarias para continuar la ejecución
 
 | Dependencia     | Contraparte      | Requerimiento   | Fecha requerida | Estado    |
 | --------------- | ---------------- | --------------- | --------------- | --------- |
@@ -143,7 +145,7 @@ Fecha de actualización: [Fecha]
 
 
 
-# 8. Plan de trabajo pendiente
+## Plan de trabajo pendiente
 
 ## Actividades necesarias para completar el proyecto
 
@@ -157,7 +159,7 @@ Fecha de actualización: [Fecha]
 
 ---
 
-# 9. Próximos pasos
+## Próximos pasos
 
 ## Compromisos concretos para el siguiente período
 

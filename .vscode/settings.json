@@ -1,6 +1,7 @@
 {
     "markdown.marp.html": "default",
     "markdown.marp.themes": [
-        "${workspaceFolder}/styles/elige-idiem.css"
+        "styles/elige-idiem.css",
+        "styles/idiem.css"
     ]
 }
